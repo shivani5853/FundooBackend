@@ -8,17 +8,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "User")
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
-	private int id;
+	private long id;
 
 	@Column(name = "firstName", nullable = false)
 	@NotEmpty(message = "Invalied FirstName")
@@ -28,6 +33,7 @@ public class User {
 	@NotEmpty(message = "Invalied LastName")
 	private String lastName;
 
+	@Email
 	@Column(name = "email", nullable = false, unique = true)
 	@NotEmpty(message = "Invalied Email Id")
 	private String email;
@@ -54,7 +60,7 @@ public class User {
 		this.isVerified = isVerified;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -102,10 +108,6 @@ public class User {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public User() {
-
-	}
-
 	public Date getCreatedAt() {
 		return createdAt;
 	}
@@ -113,22 +115,4 @@ public class User {
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
-
-	public User(int id, @NotEmpty(message = "Invalied FirstName") String firstName,
-			@NotEmpty(message = "Invalied LastName") String lastName,
-			@NotEmpty(message = "Invalied Email Id") String email, String password, long phoneNumber,
-			boolean isVerified, Date createdAt) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.password = password;
-		this.phoneNumber = phoneNumber;
-		this.isVerified = isVerified;
-		this.createdAt = createdAt;
-	}
-
-
-	
 }

@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FandoonotesApplication {
+public class FundoonotesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FandoonotesApplication.class, args);
+		SpringApplication.run(FundoonotesApplication.class, args);
 	}
 }
