@@ -5,8 +5,9 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
@@ -15,16 +16,16 @@ import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
 import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.repository.UserRepository;
-import com.bridgelabz.fundoonotes.service.ServiceInf;
+import com.bridgelabz.fundoonotes.service.UserServiceInf;
 import com.bridgelabz.fundoonotes.utility.JwtGenerator;
-import com.bridgelabz.fundoonotes.utility.Utility;
+import com.bridgelabz.fundoonotes.utility.Springmail;
 
 @Service
-public class ServiceImplementation implements ServiceInf {
+public class UserServiceImplementation implements UserServiceInf {
 
-	private static final Logger loggger = LoggerFactory.getLogger(ServiceImplementation.class);
-	@Autowired
-	private User user;
+	private static final Logger loggger = LoggerFactory.getLogger(UserServiceImplementation.class);
+
+	private User user = new User();
 
 	@Autowired
 	private UserRepository userRepository;
@@ -33,27 +34,26 @@ public class ServiceImplementation implements ServiceInf {
 	private JwtGenerator jwtGenerator;
 
 	@Autowired
-	private Utility util;
+	private Springmail mail	;
 
-	@Autowired
-	private UpdatePassword updatePassword;
+	private UpdatePassword updatePassword = new UpdatePassword();
 
 	@Override
 	public boolean register(UserDto userDto) {
 		try {
 
-//			user.setFirstName(userDto.getFirstName());
-//			user.setLastName(userDto.getLastName());
-//			user.setEmail(userDto.getEmail());
-//			user.setPhoneNumber(userDto.getPhoneNumber());
-//			user.setPassword(userDto.getPassword());
+			user.setFirstName(userDto.getFirstName());
+			user.setLastName(userDto.getLastName());
+			user.setEmail(userDto.getEmail());
+			user.setPhoneNumber(userDto.getPhoneNumber());
+			user.setPassword(new BCryptPasswordEncoder().encode(userDto.getPassword()));
 
-			BeanUtils.copyProperties(userDto, user);
+//			BeanUtils.copyProperties(userDto, user);
 			userRepository.save(user);
 			User isUserAvailable = userRepository.FindByEmail(userDto.getEmail());
 			String email = user.getEmail();
-			String response = "http://localhost:8080/user/verify/" + jwtGenerator.jwtToken(isUserAvailable.getId());
-			util.sendMail(email, response);
+			String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailable.getId());
+			mail.sendMail(email, response);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -66,7 +66,17 @@ public class ServiceImplementation implements ServiceInf {
 		User user = userRepository.checkByEmail(userLogin.getEmail());
 		System.out.println(user + userLogin.getEmail());
 		if (user.getEmail().equalsIgnoreCase(userLogin.getEmail())) {
-			System.out.println("sucessfully login");
+			if(user.isVerified())
+			{
+			boolean ispasswordMatch = BCrypt.checkpw(userLogin.getPassword(), user.getPassword());
+			if (ispasswordMatch) {
+				System.out.println("sucessfully login");
+				return user;
+			} 
+			}else {
+				return null;
+			}
+
 		}
 
 		return user;
@@ -107,9 +117,10 @@ public class ServiceImplementation implements ServiceInf {
 		if (isUserAvailable != null && isUserAvailable.isVerified() == true) {
 			try {
 				System.out.println("inside");
-				String response = "http://localhost:8080/user/updatePassword/"
+				String response = "http://localhost:8080/updatePassword/"
 						+ jwtGenerator.jwtToken(isUserAvailable.getId());
-				util.sendMail(email, response);
+				mail.sendMail(email, response);
+				System.out.println("mail Send");
 				return true;
 			} catch (JWTVerificationException | IllegalArgumentException e) {
 				e.printStackTrace();
@@ -122,12 +133,13 @@ public class ServiceImplementation implements ServiceInf {
 	public boolean updatePassword(UpdatePassword password, String token) {
 		try {
 			loggger.info("Token:" + jwtGenerator.parse(token));
+			System.out.println(password);
 			if (password.getPassword().equals(password.getConformPassword())) {
 				long id = jwtGenerator.parse(token);
 				System.out.println("Password Correct");
 				User isIdAvailable = userRepository.findById(id);
 				if (isIdAvailable.isVerified()) {
-					isIdAvailable.setPassword(password.getConformPassword());
+					isIdAvailable.setPassword(new BCryptPasswordEncoder().encode(password.getConformPassword()));
 					System.out.println("password set into model");
 					userRepository.updatePassword(password.getPassword(), id);
 					System.out.println("details save in the database");

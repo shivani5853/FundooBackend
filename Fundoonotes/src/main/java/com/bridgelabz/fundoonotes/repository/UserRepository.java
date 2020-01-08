@@ -22,7 +22,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Modifying
 	@Transactional
 	@Query(value = "update user set is_verified =true where id=?", nativeQuery = true)
-	void updateIsVarified(long id);
+	void updateIsVarified(Long id);
 
 	@Query(value = "select * from user where password=?", nativeQuery = true)
 	User FindByPassword(UpdatePassword password);
@@ -30,6 +30,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Modifying
 	@Transactional
 	@Query(value = "update user set password=? where id=?", nativeQuery = true)
-	void updatePassword(String password, long id);
+	void updatePassword(String password, Long id);
 
 }

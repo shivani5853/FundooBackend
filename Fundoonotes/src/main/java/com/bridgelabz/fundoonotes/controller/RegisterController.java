@@ -17,7 +17,7 @@ import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
 import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.responses.Responses;
-import com.bridgelabz.fundoonotes.service.ServiceInf;
+import com.bridgelabz.fundoonotes.service.UserServiceInf;
 import com.bridgelabz.fundoonotes.utility.JwtGenerator;
 
 @RestController("/user")
@@ -26,7 +26,7 @@ public class RegisterController {
 	private Logger logger = LoggerFactory.getLogger(RegisterController.class);
 
 	@Autowired
-	private ServiceInf service;
+	private UserServiceInf service;
 
 	@Autowired
 	private JwtGenerator jwtGenerator;
@@ -34,8 +34,8 @@ public class RegisterController {
 	@PostMapping("/register")
 	public ResponseEntity<Responses> register(@RequestBody UserDto userDto) {
 
-		boolean result = service.register(userDto);
-		if (result == true) {
+		User user = service.register(userDto);
+		if (user != null) {
 			return ResponseEntity.status(HttpStatus.CREATED)
 					.body(new Responses("Registration Successfully", 200, userDto));
 		} else {
@@ -61,9 +61,9 @@ public class RegisterController {
 	@GetMapping("/verify/{token}")
 	public ResponseEntity<Responses> verifyUser(@PathVariable("token") String token) {
 		System.out.println("Token for verify " + token);
-		boolean verify = service.verify(token);
+		User user = service.verify(token);
 
-		return (verify) ? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Verified", 200))
+		return (user) != null ? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Verified", 200))
 				: ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Not verified", 400));
 	}
 
@@ -71,15 +71,16 @@ public class RegisterController {
 	public ResponseEntity<Responses> forgetPassword(@RequestHeader String email) {
 		logger.info("Email:" + email);
 		System.out.println(email);
-		boolean verify = service.forgetPassword(email);
+		User user = service.forgetPassword(email);
 
-		return (verify) ? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("User Exist", 200))
+		return (user) != null ? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("User Exist", 200))
 				: ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Responses("User Not found", 400));
 	}
 
 	@PostMapping("/updatePassword/{token}")
 	public ResponseEntity<Responses> updatePassword(@RequestBody UpdatePassword password,
 			@PathVariable("token") String token) {
+		System.out.println("12");
 		logger.info("Token:" + token);
 		System.out.println("password" + password.getConformPassword());
 		boolean verified = service.updatePassword(password, token);
