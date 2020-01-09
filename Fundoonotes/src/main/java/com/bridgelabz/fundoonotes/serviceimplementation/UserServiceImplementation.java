@@ -28,6 +28,9 @@ public class UserServiceImplementation implements UserServiceInf {
 	private User user = new User();
 
 	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+	
+	@Autowired
 	private UserRepository userRepository;
 
 	@Autowired
@@ -39,7 +42,7 @@ public class UserServiceImplementation implements UserServiceInf {
 	private UpdatePassword updatePassword = new UpdatePassword();
 
 	@Override
-	public boolean register(UserDto userDto) {
+	public User register(UserDto userDto) {
 		try {
 
 			user.setFirstName(userDto.getFirstName());
@@ -54,11 +57,11 @@ public class UserServiceImplementation implements UserServiceInf {
 			String email = user.getEmail();
 			String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailable.getId());
 			mail.sendMail(email, response);
-			return true;
+			return (User) userRepository;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return false;
+		return null;
 	}
 
 	@Override
@@ -83,7 +86,7 @@ public class UserServiceImplementation implements UserServiceInf {
 	}
 
 	@Override
-	public boolean verify(String token) {
+	public User verify(String token) {
 		try {
 			System.out.println("Inside");
 			loggger.info("Id Varification", (long) jwtGenerator.parse(token));
@@ -93,16 +96,16 @@ public class UserServiceImplementation implements UserServiceInf {
 			if (!isIdValied.isVerified()) {
 				userRepository.updateIsVarified(id);
 				System.out.println("save details");
-				return true;
+				return (User) userRepository;
 			} else {
 				System.out.println("already varified");
-				return true;
+				return (User) userRepository;
 			}
 		} catch (JWTVerificationException | IllegalArgumentException | UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 
-		return false;
+		return null;
 	}
 
 	@Override
@@ -111,7 +114,7 @@ public class UserServiceImplementation implements UserServiceInf {
 	}
 
 	@Override
-	public boolean forgetPassword(String email) {
+	public User forgetPassword(String email) {
 		User isUserAvailable = userRepository.FindByEmail(email);
 		System.out.println(isUserAvailable + email);
 		if (isUserAvailable != null && isUserAvailable.isVerified() == true) {
@@ -121,12 +124,12 @@ public class UserServiceImplementation implements UserServiceInf {
 						+ jwtGenerator.jwtToken(isUserAvailable.getId());
 				mail.sendMail(email, response);
 				System.out.println("mail Send");
-				return true;
+				return (User) userRepository;
 			} catch (JWTVerificationException | IllegalArgumentException e) {
 				e.printStackTrace();
 			}
 		}
-		return false;
+		return null;
 	}
 
 	@Override

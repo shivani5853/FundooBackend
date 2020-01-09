@@ -1,0 +1,9 @@
+[2020-01-09 13:02:45.948] - 20545 INFO [restartedMain] --- org.apache.catalina.core.StandardService: Starting service [Tomcat]
+[2020-01-09 13:02:45.950] - 20545 INFO [restartedMain] --- org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-01-09 13:02:45.995] - 20545 INFO [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Initializing Spring embedded WebApplicationContext
+[2020-01-09 13:02:46.092] - 20545 INFO [restartedMain] --- org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+[2020-01-09 13:02:46.126] - 20545 INFO [restartedMain] --- org.hibernate.Version: HHH000412: Hibernate Core {5.4.9.Final}
+[2020-01-09 13:02:46.190] - 20545 INFO [restartedMain] --- org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[2020-01-09 13:02:46.370] - 20545 INFO [restartedMain] --- org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[2020-01-09 13:02:46.777] - 20545 INFO [restartedMain] --- org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2020-01-09 13:02:46.815] - 20545 INFO [restartedMain] --- org.apache.catalina.core.StandardService: Stopping service [Tomcat]

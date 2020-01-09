@@ -1,25 +1,19 @@
 package com.bridgelabz.fundoonotes.configuration;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import com.bridgelabz.fundoonotes.model.Notes;
+import com.bridgelabz.fundoonotes.service.NoteServiceInf;
 
 
 @Configuration
 public class ApplicationConfig {
 
-//	@Bean
-//	public User getUser() {
-//		return new User();
-//
-//	}
-//
-//	@Bean
-//	public Utility getUtility() {
-//		return new Utility();
-//	}
-//
-//	@Bean
-//	public UpdatePassword getUpdatePassword() {
-//		return new UpdatePassword();
-//	}
+	@Bean 
+	public BCryptPasswordEncoder getBcrBCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 
 }
