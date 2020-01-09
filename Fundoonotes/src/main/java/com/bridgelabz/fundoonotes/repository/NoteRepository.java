@@ -16,8 +16,10 @@ public interface NoteRepository extends JpaRepository<Notes, Long> {
 
 	@Modifying
 	@Transactional
-	@Query(value ="insert into notes(note_id,title,description,created_at,update_time) values(?,?,?,?,?)",nativeQuery=true) 
-	void insertData(Long note_id,String title, String description,LocalDateTime created_at, Date update_time);
-	
-	
+	@Query(value = "insert into notes(note_id,title,description,created_at,update_time) values(?,?,?,?,?)", nativeQuery = true)
+	void insertData(Long note_id, String title, String description, LocalDateTime created_at, Date update_time);
+
+	@Query(value = "select * from notes where note_id=?", nativeQuery = true)
+	Notes findById(long note_id);
+
 }

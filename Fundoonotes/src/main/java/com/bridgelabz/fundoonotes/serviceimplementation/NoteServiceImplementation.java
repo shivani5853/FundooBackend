@@ -30,12 +30,10 @@ public class NoteServiceImplementation implements NoteServiceInf {
 
 	@Override
 	public Notes save(NoteDto noteDto, String token) {
-
 		try {
 			long id = jwtGenerator.parse(token);
 			System.out.println(token);
 			log.info("Id:" + id + " Note Description:" + noteDto.getDescription());
-
 			User user = userRepository.findById(id);
 			if (user != null) {
 				Notes note = new Notes(noteDto.getTitle(), noteDto.getDescription());
@@ -49,7 +47,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				noteRepository.insertData(note.getNoteId(), note.getTitle(), note.getDescription(), note.getCreatedAt(),
 						note.getUpdateTime());
 				System.out.println(note);
-				
+
 				return note;
 
 			}
@@ -61,9 +59,42 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	}
 
 	@Override
-	public Notes delete() {
+	public Notes delete(long noteId, String token) {
+		try {
+			long id = jwtGenerator.parse(token);
+			User isUserAvailable = userRepository.findById(id);
+			if (isUserAvailable.isVerified()) {
+				Notes isNoteAvailable = noteRepository.findById(noteId);
+				if (isNoteAvailable.isVerified()) {
+
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return null;
 
+	}
+
+	@Override
+	public Notes pinned(long noteId, String token) {
+		try {
+			long userId = jwtGenerator.parse(token);
+			System.out.println(userId+" "+token+" "+noteId);
+			Notes note=noteRepository.findById(noteId);
+			System.out.println(note);
+			if(note.getIsPinned())
+			{
+				
+			}
+			
+		
+		
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

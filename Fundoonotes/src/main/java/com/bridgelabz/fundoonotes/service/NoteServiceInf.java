@@ -7,6 +7,8 @@ public interface NoteServiceInf {
 
 	public Notes save(NoteDto noteDto, String token);
 
-	public Notes delete();
+	public Notes delete(long noteId, String token);
+
+	public Notes pinned(long noteId, String token);
 
 }

@@ -44,7 +44,6 @@ public class UserServiceImplementation implements UserServiceInf {
 	@Override
 	public User register(UserDto userDto) {
 		try {
-
 			user.setFirstName(userDto.getFirstName());
 			user.setLastName(userDto.getLastName());
 			user.setEmail(userDto.getEmail());
@@ -53,9 +52,9 @@ public class UserServiceImplementation implements UserServiceInf {
 
 //			BeanUtils.copyProperties(userDto, user);
 			userRepository.save(user);
-			User isUserAvailable = userRepository.FindByEmail(userDto.getEmail());
+			User isUserAvailableTwo = userRepository.FindByEmail(userDto.getEmail());
 			String email = user.getEmail();
-			String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailable.getId());
+			String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailableTwo.getId());
 			mail.sendMail(email, response);
 			return user;
 		} catch (Exception e) {

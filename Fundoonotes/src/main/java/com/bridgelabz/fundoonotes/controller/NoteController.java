@@ -24,14 +24,12 @@ import lombok.extern.slf4j.Slf4j;
 public class NoteController {
 
 	@Autowired
-	private NoteServiceInf noteServiceInf; 
-
+	private NoteServiceInf noteServiceInf;
 
 	@PostMapping("/create")
-	public ResponseEntity<Responses> createNote(@RequestBody NoteDto noteDto,@RequestHeader ("token") String token) {
-		
-		Notes result=noteServiceInf.save(noteDto, token);
-		System.out.println("result"+result);
+	public ResponseEntity<Responses> createNote(@RequestBody NoteDto noteDto, @RequestHeader("token") String token) {
+
+		Notes result = noteServiceInf.save(noteDto, token);
 		if (result != null) {
 			return ResponseEntity.status(HttpStatus.CREATED)
 					.body(new Responses("Registration Successfully", 200, noteDto));
@@ -40,14 +38,20 @@ public class NoteController {
 					.body(new Responses("User Already Exist", 400, noteDto));
 		}
 	}
-	
+
 	@DeleteMapping("/delete/{noteId}")
-	public ResponseEntity<Responses> deleteNote(@PathVariable("noteId") Long noteId,@RequestBody String token)
-	{
-		
+	public ResponseEntity<Responses> deleteNote(@PathVariable("noteId") Long noteId, @RequestBody String token) {
+		Notes result = noteServiceInf.delete(noteId, token);
+
 		return null;
-		
+
 	}
-	
+
+	public ResponseEntity<Responses> pinnedNote(@RequestHeader("token") String token,
+			@PathVariable("noteId") Long noteId) {
+		Notes result=noteServiceInf.pinned(noteId,token);
+		return null;
+
+	}
 
 }
