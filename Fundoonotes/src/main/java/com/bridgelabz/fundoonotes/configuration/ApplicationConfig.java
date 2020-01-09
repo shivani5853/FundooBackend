@@ -2,6 +2,7 @@ package com.bridgelabz.fundoonotes.configuration;
 
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration
 public class ApplicationConfig {
 
@@ -20,7 +21,5 @@ public class ApplicationConfig {
 //	public UpdatePassword getUpdatePassword() {
 //		return new UpdatePassword();
 //	}
-	
-	
-	
+
 }
