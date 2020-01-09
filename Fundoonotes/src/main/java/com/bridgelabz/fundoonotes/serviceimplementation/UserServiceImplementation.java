@@ -57,7 +57,7 @@ public class UserServiceImplementation implements UserServiceInf {
 			String email = user.getEmail();
 			String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailable.getId());
 			mail.sendMail(email, response);
-			return (User) userRepository;
+			return user;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -96,10 +96,10 @@ public class UserServiceImplementation implements UserServiceInf {
 			if (!isIdValied.isVerified()) {
 				userRepository.updateIsVarified(id);
 				System.out.println("save details");
-				return (User) userRepository;
+				return user;
 			} else {
 				System.out.println("already varified");
-				return (User) userRepository;
+				return user;
 			}
 		} catch (JWTVerificationException | IllegalArgumentException | UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -124,7 +124,7 @@ public class UserServiceImplementation implements UserServiceInf {
 						+ jwtGenerator.jwtToken(isUserAvailable.getId());
 				mail.sendMail(email, response);
 				System.out.println("mail Send");
-				return (User) userRepository;
+				return user;
 			} catch (JWTVerificationException | IllegalArgumentException e) {
 				e.printStackTrace();
 			}

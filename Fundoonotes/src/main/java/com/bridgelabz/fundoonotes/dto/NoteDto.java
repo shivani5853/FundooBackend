@@ -11,8 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class NoteDto {
 
-	private Long noteId;
-
 	private String title;
 
 	private String description;

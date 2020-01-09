@@ -1,6 +1,7 @@
 package com.bridgelabz.fundoonotes.model;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,13 +21,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Notes")
+@Table(name = "notes")
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Notes {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Note_Id")
@@ -52,12 +53,15 @@ public class Notes {
 	@DateTimeFormat
 	private LocalDateTime createdAt;
 
+	@Column(name = "colour")
+	private String colour;
+
 	@Column(name = "UpdateTime")
 	@DateTimeFormat
-	private LocalDateTime updateTime;
+	private Date updateTime;
 
 	@Column(name = "reminderTime")
-	private LocalDateTime reminderTime;
+	private Date reminderTime;
 
 	@Column(name = "reminder")
 	private String reminder;
@@ -68,5 +72,10 @@ public class Notes {
 
 	@Column(columnDefinition = "boolean default false")
 	private boolean isVerified;
+
+	public Notes(String title, String description) {
+		this.title = title;
+		this.description = description;
+	}
 
 }
