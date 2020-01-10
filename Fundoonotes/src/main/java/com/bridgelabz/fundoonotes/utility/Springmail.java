@@ -12,7 +12,7 @@ public class Springmail {
 		try {
 			SimpleMailMessage simpleMsg = new SimpleMailMessage();
 			simpleMsg.setTo(email);
-			simpleMsg.setSubject("Forget password");
+			simpleMsg.setSubject("Verify mail");
 			simpleMsg.setText(response);
 			javaMailSender.send(simpleMsg);
 		} catch (Exception e) {

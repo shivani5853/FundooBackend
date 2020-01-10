@@ -9,6 +9,10 @@ public interface NoteServiceInf {
 
 	public Notes delete(long noteId, String token);
 
-	public Notes pinned(long noteId, String token);
+	public Integer pinned(long noteId, String token);
+
+	public Integer archive(long noteId, String token);
+
+	public Notes colour(long noteId, String token, String colour);
 
 }

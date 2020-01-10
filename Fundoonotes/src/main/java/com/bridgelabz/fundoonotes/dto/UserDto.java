@@ -25,8 +25,6 @@ public class UserDto {
 
 	private String password;
 
-	private String conformPassword;
-
 	@Size(max = 10, message = "Invalied Phone Number")
 	private long phoneNumber;
 }

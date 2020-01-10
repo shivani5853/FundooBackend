@@ -53,7 +53,7 @@ public class Notes {
 	@DateTimeFormat
 	private LocalDateTime createdAt;
 
-	@Column(name = "colour")
+	@Column(columnDefinition = "varchar(10) default 'ffffff'")
 	private String colour;
 
 	@Column(name = "UpdateTime")
