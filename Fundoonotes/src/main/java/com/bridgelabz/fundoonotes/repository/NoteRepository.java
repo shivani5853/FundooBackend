@@ -17,8 +17,8 @@ public interface NoteRepository extends JpaRepository<Notes, Long> {
 
 	@Modifying
 	@Transactional
-	@Query(value = "insert into notes(note_id,title,description,created_at,update_time ,  user_id) values(?,?,?,?,?,?)", nativeQuery = true)
-	public void insertData(Long note_id, String title, String description, LocalDateTime created_at, Date update_time , Long userId);
+	@Query(value = "insert into notes(note_id,title,description,created_at,update_time ,  user_id,reminder,reminder_time) values(?,?,?,?,?,?,?,?)", nativeQuery = true)
+	public void insertData(Long note_id, String title, String description, LocalDateTime created_at, Date update_time , Long userId,String reminder,Date reminderTime);
 
 	@Query(value = "select * from notes where note_id=?", nativeQuery = true)
 	public Notes findById(long note_id);
@@ -37,5 +37,10 @@ public interface NoteRepository extends JpaRepository<Notes, Long> {
 	@Transactional
 	@Query(value = "update notes set colour=? where user_id=? and note_id=?", nativeQuery = true)
 	public void setColour(String colour,Long user_id, Long note_id);
+
+	@Modifying
+	@Transactional
+	@Query(value ="update notes set reminder=? and reminder_time=? where user_id=? and note_id=?",nativeQuery=true)
+	public void remindMe(String reminder, Date reminderTime,Long userId, Long note_id);
 
 }

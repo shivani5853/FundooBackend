@@ -1,6 +1,7 @@
 package com.bridgelabz.fundoonotes.service;
 
 import com.bridgelabz.fundoonotes.dto.NoteDto;
+import com.bridgelabz.fundoonotes.dto.ReminderDto;
 import com.bridgelabz.fundoonotes.model.Notes;
 
 public interface NoteServiceInf {
@@ -14,5 +15,7 @@ public interface NoteServiceInf {
 	public Integer archive(long noteId, String token);
 
 	public Notes colour(long noteId, String token, String colour);
+
+	public Notes remind(ReminderDto reminder, long noteId, String token);
 
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoonotes.dto.NoteDto;
+import com.bridgelabz.fundoonotes.dto.ReminderDto;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.repository.NoteRepository;
@@ -28,6 +29,8 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	@Autowired
 	private UserRepository userRepository;
 
+	private ReminderDto reminderDto = new ReminderDto();
+
 	@Override
 	public Notes save(NoteDto noteDto, String token) {
 		try {
@@ -45,7 +48,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				note.setColour("white");
 				System.out.println(note);
 				noteRepository.insertData(note.getNoteId(), note.getTitle(), note.getDescription(), note.getCreatedAt(),
-						note.getUpdateTime() , id);
+						note.getUpdateTime(), id,note.getReminder(),note.getReminderTime());
 				System.out.println(note);
 
 				return note;
@@ -129,12 +132,32 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			Long userId = jwtGenerator.parse(token);
 			Notes note = noteRepository.findById(noteId);
 			System.out.println(userId);
-			noteRepository.setColour(colour,userId, noteId);
+			noteRepository.setColour(colour, userId, noteId);
 			return note;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
+		return null;
+	}
+
+	@Override
+	public Notes remind(ReminderDto reminder, long noteId, String token) {
+		try {
+			long userId = jwtGenerator.parse(token);
+			User user = userRepository.findById(userId);
+			if (user!=null) {
+				Notes note = noteRepository.findById(noteId);
+				System.out.println(note.getColour());
+					note.setReminderTime(reminderDto.getReminder());
+					note.setReminder(reminderDto.getReminderStatus());
+					System.out.println(note);
+					noteRepository.remindMe(note.getReminder(),note.getReminderTime(),userId,noteId);
+					return note;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoonotes.dto.NoteDto;
+import com.bridgelabz.fundoonotes.dto.ReminderDto;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.responses.Responses;
 import com.bridgelabz.fundoonotes.service.NoteServiceInf;
@@ -82,7 +83,6 @@ public class NoteController {
 	@PutMapping("/colour/{noteId}")
 	public ResponseEntity<Responses> colourNote(@RequestHeader("token") String token,
 			@PathVariable("noteId") Long note_id, @RequestParam("colour") String colour) {
-		System.out.println(colour);
 		Notes result = noteServiceInf.colour(note_id, token, colour);
 		if (result != null) {
 			return ResponseEntity.status(HttpStatus.CREATED).body(new Responses("Colour Change Successfully", 200));
@@ -92,4 +92,15 @@ public class NoteController {
 		}
 	}
 
+	@PostMapping("/reminder/{noteId}")
+	public ResponseEntity<Responses> reminderMe(@RequestBody ReminderDto reminder, @RequestHeader String token,
+			@PathVariable("noteId") Long noteId) {
+		Notes result = noteServiceInf.remind(reminder, noteId, token);
+		if (result != null) {
+			return ResponseEntity.status(HttpStatus.CREATED).body(new Responses("Reminder set sucessfully", 200));
+		} else {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!", 400));
+		}
+
+	}
 }
