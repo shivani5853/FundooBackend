@@ -1,9 +1,12 @@
 package com.bridgelabz.fundoonotes.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -126,4 +129,25 @@ public class NoteController {
 
 	}
 
+	@GetMapping("/searchNoteByUserId/{userId}")
+	public ResponseEntity<Responses> searchNoteByUserId(@PathVariable("userId") Long userId,
+			@RequestHeader("token") String token) {
+		List<Notes> result = noteServiceInf.searchByUserId(userId, token);
+		if (result != null) {
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("List of the notes", 200));
+		} else {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Note not available", 400));
+		}
+	}
+	
+	@GetMapping("/searchNoteByNoteId/{noteId}")
+	public ResponseEntity<Responses> searchNoteByNoteId(@PathVariable("noteId") Long noteId,
+			@RequestHeader("token") String token) {
+		List<Notes> result = noteServiceInf.searchByNoteId(noteId, token);
+		if (result != null) {
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("List of the notes", 200));
+		} else {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Note not available", 400));
+		}
+	}
 }

@@ -14,6 +14,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
 import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
+import com.bridgelabz.fundoonotes.exception.UserException;
 import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.repository.UserRepository;
 import com.bridgelabz.fundoonotes.service.UserServiceInf;
@@ -39,28 +40,26 @@ public class UserServiceImplementation implements UserServiceInf {
 	@Autowired
 	private Springmail mail	;
 
+	private UserException userException=new UserException(); 
+
 	private UpdatePassword updatePassword = new UpdatePassword();
 
 	@Override
-	public User register(UserDto userDto) {
-		try {
-			user.setFirstName(userDto.getFirstName());
-			user.setLastName(userDto.getLastName());
-			user.setEmail(userDto.getEmail());
-			user.setPhoneNumber(userDto.getPhoneNumber());
-			user.setPassword(new BCryptPasswordEncoder().encode(userDto.getPassword()));
+	public User register(UserDto userDto) throws UserException {
+		user.setFirstName(userDto.getFirstName());
+		user.setLastName(userDto.getLastName());
+		user.setEmail(userDto.getEmail());
+		user.setPhoneNumber(userDto.getPhoneNumber());
+		user.setPassword(new BCryptPasswordEncoder().encode(userDto.getPassword()));
 
 //			BeanUtils.copyProperties(userDto, user);
-			userRepository.save(user);
-			User isUserAvailableTwo = userRepository.FindByEmail(userDto.getEmail());
-			String email = user.getEmail();
-			String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailableTwo.getId());
-			mail.sendMail(email, response);
-			return user;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+		userRepository.save(user);
+		User isUserAvailableTwo = userRepository.FindByEmail(userDto.getEmail());
+		String email = user.getEmail();
+		String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailableTwo.getId());
+		mail.sendMail(email, response);
+		
+		return user;
 	}
 
 	@Override

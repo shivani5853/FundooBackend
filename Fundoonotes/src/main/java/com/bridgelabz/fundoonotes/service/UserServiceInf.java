@@ -5,10 +5,11 @@ import java.util.List;
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
 import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
+import com.bridgelabz.fundoonotes.exception.UserException;
 import com.bridgelabz.fundoonotes.model.User;
 
 public interface UserServiceInf {
-	public User register(UserDto userDto);
+	public User register(UserDto userDto)throws UserException;
 
 	public User login(UserLoginDto userLogin);
 

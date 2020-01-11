@@ -1,10 +1,13 @@
 package com.bridgelabz.fundoonotes.serviceimplementation;
 
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.bridgelabz.fundoonotes.dto.NoteDto;
 import com.bridgelabz.fundoonotes.dto.ReminderDto;
 import com.bridgelabz.fundoonotes.model.Notes;
@@ -50,9 +53,9 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				note.setReminderTime(reminderDto.getReminder());
 				System.out.println(note);
 				noteRepository.insertData(note.getNoteId(), note.getTitle(), note.getDescription(), note.getCreatedAt(),
-						note.getUpdateTime(), id, note.getReminder(), note.getReminderTime(),note.getIsTrash());
+						note.getUpdateTime(), id, note.getReminder(), note.getReminderTime(), note.getIsTrash());
 				System.out.println(note);
-
+				
 				return note;
 
 			}
@@ -66,6 +69,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	@Override
 	public Integer pinned(long note_id, String token) {
 		try {
+			Notes noteOne=verify(token);
 			System.out.println("Inside");
 			long userId = jwtGenerator.parse(token);
 			System.out.println("User Id:" + userId + " Token:" + token + "Note Id:" + note_id);
@@ -199,6 +203,65 @@ public class NoteServiceImplementation implements NoteServiceInf {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return null;
+	}
+
+	@Override
+	public List<Notes> searchByUserId(long userId, String token) {
+		try {
+			long user = jwtGenerator.parse(token);
+			System.out.println(token);
+			User isUserVerified = userRepository.findById(userId);
+			if (isUserVerified.isVerified()) {
+				System.out.println("Inside");
+				List<Notes> note = noteRepository.searchAllNoteByUserId(userId);
+				for (Notes notes : note) {
+					System.out.println(notes.getDescription());
+				}
+				return note;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public List<Notes> searchByNoteId(long noteId, String token) {
+		try {
+			long user = jwtGenerator.parse(token);
+			System.out.println(token);
+			User isUserVerified = userRepository.findById(noteId);
+			if (isUserVerified != null) {
+				System.out.println("Inside" + " " + isUserVerified.getId());
+				List<Notes> note = noteRepository.searchAllNotesByNoteId(isUserVerified.getId(), noteId);
+				for (Notes notes : note) {
+					System.out.println(notes.getDescription());
+				}
+				return note;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	@Override
+	public Notes verify(String token) {
+		try {
+			long id = jwtGenerator.parse(token);
+			Notes note = noteRepository.findById(id);
+			if (!note.isVerified()) {
+				noteRepository.updateIsVarified(id);
+				System.out.println("save details");
+				return note;
+			} else {
+				System.out.println("already varified");
+				return note;
+			}
+		} catch (JWTVerificationException | IllegalArgumentException | UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+
 		return null;
 	}
 

@@ -2,6 +2,7 @@ package com.bridgelabz.fundoonotes.repository;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -54,4 +55,23 @@ public interface NoteRepository extends JpaRepository<Notes, Long> {
 	@Transactional
 	@Query(value = "Delete from notes where note_id=? and user_id=?",nativeQuery = true)
 	public void deleteNote(Long note_id,Long user_id);
+
+	@Query(value = "select * from notes where user_id=?", nativeQuery = true)
+	public List<Notes> searchAllNoteByUserId(long userId);
+	
+	@Query(value = "select * from notes where user_id=? and note_id=?", nativeQuery = true)
+	public List<Notes> searchAllNotesByNoteId(long userId,long noteId);
+	
+	@Query(value = "select * from notes where note_id=?", nativeQuery = true)
+	public Notes searchNotesByNoteId(String note_id);
+
+	@Modifying
+	@Transactional
+	@Query(value = "update notes set is_verified =true where note_id=?", nativeQuery = true)
+	void updateIsVarified(Long id);
 }
+
+
+
+
+
