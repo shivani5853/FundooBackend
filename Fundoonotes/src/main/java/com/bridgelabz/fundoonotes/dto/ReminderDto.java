@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoonotes.dto;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -13,5 +14,5 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ReminderDto {
 	private String reminderStatus;
-	private Date reminder; 
+	private LocalDateTime reminder; 
 }

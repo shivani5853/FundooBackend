@@ -61,7 +61,7 @@ public class Notes {
 	private Date updateTime;
 
 	@Column(name = "reminderTime")
-	private Date reminderTime;
+	private LocalDateTime reminderTime;
 
 	@Column(name = "reminder")
 	private String reminder;
@@ -76,6 +76,11 @@ public class Notes {
 	public Notes(String title, String description) {
 		this.title = title;
 		this.description = description;
+	}
+	
+	public void setupdateTime()
+	{
+		this.updateTime=new Date();
 	}
 
 }

@@ -8,7 +8,7 @@ public interface NoteServiceInf {
 
 	public Notes save(NoteDto noteDto, String token);
 
-	public Notes delete(long noteId, String token);
+	public Integer delete(long noteId, String token);
 
 	public Integer pinned(long noteId, String token);
 
@@ -16,6 +16,8 @@ public interface NoteServiceInf {
 
 	public Notes colour(long noteId, String token, String colour);
 
-	public Notes remind(ReminderDto reminder, long noteId, String token);
+	public Notes reminder(ReminderDto reminder, long noteId, String token);
+
+	public Notes deleteParmanet(long noteId, String token);
 
 }

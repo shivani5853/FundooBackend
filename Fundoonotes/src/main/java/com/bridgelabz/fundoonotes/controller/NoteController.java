@@ -30,7 +30,8 @@ public class NoteController {
 	private NoteServiceInf noteServiceInf;
 
 	@PostMapping("/create")
-	public ResponseEntity<Responses> createNote(@RequestBody NoteDto noteDto, @RequestHeader("token") String token) {
+	public ResponseEntity<Responses> createNote(@RequestBody NoteDto noteDto, @RequestHeader("token") String token)
+			throws Exception {
 
 		Notes result = noteServiceInf.save(noteDto, token);
 		if (result != null) {
@@ -42,15 +43,9 @@ public class NoteController {
 		}
 	}
 
-	@DeleteMapping("/delete/{noteId}")
-	public ResponseEntity<Responses> deleteNote(@PathVariable("noteId") Long noteId, @RequestHeader String token) {
-		Notes result = noteServiceInf.delete(noteId, token);
-		return null;
-	}
-
 	@PutMapping("/pinned/{noteId}")
 	public ResponseEntity<Responses> pinnedNote(@RequestHeader("token") String token,
-			@PathVariable("noteId") Long note_id) {
+			@PathVariable("noteId") Long note_id) throws Exception {
 		System.out.println(token);
 		Integer result = noteServiceInf.pinned(note_id, token);
 		System.out.println(result);
@@ -66,7 +61,7 @@ public class NoteController {
 
 	@PutMapping("/archive/{noteId}")
 	public ResponseEntity<Responses> archiveNote(@RequestHeader("token") String token,
-			@PathVariable("noteId") Long note_id) {
+			@PathVariable("noteId") Long note_id) throws Exception {
 		System.out.println(token);
 		Integer result = noteServiceInf.pinned(note_id, token);
 		System.out.println(result);
@@ -82,7 +77,7 @@ public class NoteController {
 
 	@PutMapping("/colour/{noteId}")
 	public ResponseEntity<Responses> colourNote(@RequestHeader("token") String token,
-			@PathVariable("noteId") Long note_id, @RequestParam("colour") String colour) {
+			@PathVariable("noteId") Long note_id, @RequestParam("colour") String colour) throws Exception {
 		Notes result = noteServiceInf.colour(note_id, token, colour);
 		if (result != null) {
 			return ResponseEntity.status(HttpStatus.CREATED).body(new Responses("Colour Change Successfully", 200));
@@ -94,13 +89,41 @@ public class NoteController {
 
 	@PostMapping("/reminder/{noteId}")
 	public ResponseEntity<Responses> reminderMe(@RequestBody ReminderDto reminder, @RequestHeader String token,
-			@PathVariable("noteId") Long noteId) {
-		Notes result = noteServiceInf.remind(reminder, noteId, token);
+			@PathVariable("noteId") Long noteId) throws Exception {
+		System.out.println(reminder.getReminderStatus() + " " + reminder.getReminder() + "  " + noteId);
+		Notes result = noteServiceInf.reminder(reminder, noteId, token);
 		if (result != null) {
 			return ResponseEntity.status(HttpStatus.CREATED).body(new Responses("Reminder set sucessfully", 200));
 		} else {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!", 400));
 		}
+	}
+
+	@DeleteMapping("/delete/{noteId}")
+	public ResponseEntity<Responses> deleteNote(@PathVariable("noteId") Long noteId, @RequestHeader String token)
+			throws Exception {
+
+		Integer result = noteServiceInf.delete(noteId, token);
+		if (result == 1) {
+			return ResponseEntity.status(HttpStatus.OK).body(new Responses("Note Moved to Trash Sucessfully", 200));
+		} else if (result == 0) {
+			return ResponseEntity.status(HttpStatus.OK).body(new Responses("Sucessfully Move on Trash", 200));
+		} else {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!", 400));
+		}
 
 	}
+
+	@DeleteMapping("/deleteParmanet/{noteId}")
+	public ResponseEntity<Responses> deleteParmanetly(@PathVariable("noteId") Long noteId,
+			@RequestHeader("token") String token) throws Exception {
+		Notes result = noteServiceInf.deleteParmanet(noteId, token);
+		if (result != null) {
+			return ResponseEntity.status(HttpStatus.OK).body(new Responses("Note Deleted Sucessfully", 200));
+		} else {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!", 400));
+		}
+
+	}
+
 }

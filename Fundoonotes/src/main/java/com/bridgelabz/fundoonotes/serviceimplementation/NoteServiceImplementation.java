@@ -46,9 +46,11 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				note.setIsPinned(false);
 				note.setIsTrash(false);
 				note.setColour("white");
+				note.setReminder(reminderDto.getReminderStatus());
+				note.setReminderTime(reminderDto.getReminder());
 				System.out.println(note);
 				noteRepository.insertData(note.getNoteId(), note.getTitle(), note.getDescription(), note.getCreatedAt(),
-						note.getUpdateTime(), id,note.getReminder(),note.getReminderTime());
+						note.getUpdateTime(), id, note.getReminder(), note.getReminderTime(),note.getIsTrash());
 				System.out.println(note);
 
 				return note;
@@ -59,24 +61,6 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			e.printStackTrace();
 		}
 		return null;
-	}
-
-	@Override
-	public Notes delete(long noteId, String token) {
-		try {
-			long id = jwtGenerator.parse(token);
-			User isUserAvailable = userRepository.findById(id);
-			if (isUserAvailable.isVerified()) {
-				Notes isNoteAvailable = noteRepository.findById(noteId);
-				if (isNoteAvailable.isVerified()) {
-
-				}
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
-
 	}
 
 	@Override
@@ -142,18 +126,75 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	}
 
 	@Override
-	public Notes remind(ReminderDto reminder, long noteId, String token) {
+	public Notes reminder(ReminderDto reminderMe, long noteId, String token) {
 		try {
+			System.out.println(reminderMe.getReminderStatus());
 			long userId = jwtGenerator.parse(token);
 			User user = userRepository.findById(userId);
-			if (user!=null) {
+			if (user != null) {
 				Notes note = noteRepository.findById(noteId);
 				System.out.println(note.getColour());
-					note.setReminderTime(reminderDto.getReminder());
-					note.setReminder(reminderDto.getReminderStatus());
-					System.out.println(note);
-					noteRepository.remindMe(note.getReminder(),note.getReminderTime(),userId,noteId);
+				note.setReminderTime(reminderMe.getReminder());
+				note.setReminder(reminderMe.getReminderStatus());
+				System.out.println(note);
+				note.setupdateTime();
+				noteRepository.remindMe(note.getReminderTime(), note.getReminder(), note.getUpdateTime(), user.getId(),
+						noteId);
+				System.out.println(note.getReminder() + " " + note.getReminderTime() + " " + " " + note.getUpdateTime()
+						+ reminderDto.getReminder() + " " + reminderDto.getReminderStatus());
+				return note;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Integer delete(long noteId, String token) {
+		try {
+			long userId = jwtGenerator.parse(token);
+			User isUserAvailable = userRepository.findById(userId);
+
+			if (isUserAvailable.isVerified()) {
+				Notes isNoteAvailable = noteRepository.findById(noteId);
+				if (isNoteAvailable.getIsTrash()) {
+					System.out.println(isNoteAvailable.getIsTrash());
+					noteRepository.setPinned(false, userId, noteId);
+					noteRepository.setDelete(false, userId, noteId);
+					return 1;
+				} else if (!isNoteAvailable.getIsTrash()) {
+					System.out.println(isNoteAvailable.getIsTrash());
+					noteRepository.setPinned(false, userId, noteId);
+					noteRepository.setDelete(true, userId, noteId);
+					return 0;
+				} else {
+					System.out.println(isNoteAvailable.getIsTrash());
+					return -1;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+
+	}
+
+	@Override
+	public Notes deleteParmanet(long noteId, String token) {
+		try {
+			long userId = jwtGenerator.parse(token);
+			System.out.println(token);
+			User isUserAvailable = userRepository.findById(userId);
+			System.out.println(isUserAvailable.getId());
+			if (isUserAvailable.isVerified()) {
+				Notes note = noteRepository.findById(noteId);
+				System.out.println(note.getNoteId() + " " + note.isVerified() + " " + note.getIsTrash());
+
+				if (note.getIsTrash()) {
+					noteRepository.deleteNote(noteId, userId);
 					return note;
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
