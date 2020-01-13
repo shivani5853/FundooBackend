@@ -1,5 +1,7 @@
 package com.bridgelabz.fundoonotes.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,8 +27,11 @@ public class Labels {
 	
 	@Column(name = "labelName",nullable = false)
 	private String labelName;
-//	
-//	@ManyToMany
-//	@JoinColumn(name = "UserId")
-//	private User labelUser;
+	
+	@ManyToMany
+	@JoinColumn(name = "UserId")
+	private User labelUser;
+	
+	@ManyToMany(mappedBy = "lebel")
+	private List<Notes> noteList;
 }

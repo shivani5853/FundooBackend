@@ -21896,4 +21896,1196 @@ Consider defining a bean of type 'com.bridgelabz.fundoonotes.exception.UserExcep
 ""2020-01-11 19:12:00 - Tomcat started on port(s): 8080 (http) with context path ''
 ""2020-01-11 19:12:00 - Started FundoonotesApplication in 1.002 seconds (JVM running for 57.116)
 ""2020-01-11 19:12:00 - Condition evaluation unchanged
+""2020-01-11 19:22:35 - Application shutdown requested.
+""2020-01-11 19:22:35 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-11 19:22:35 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-11 19:22:35 - HikariPool-3 - Shutdown initiated...
+""2020-01-11 19:22:35 - HikariPool-3 - Shutdown completed.
+""2020-01-13 12:40:42 - Starting FundoonotesApplication on mobicomp-desktop with PID 20874 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 12:40:42 - No active profile set, falling back to default profiles: default
+""2020-01-13 12:40:42 - The Class-Path manifest attribute in /home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+""2020-01-13 12:40:42 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2020-01-13 12:40:42 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2020-01-13 12:40:43 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 12:40:43 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 12:40:43 - Finished Spring Data repository scanning in 103ms. Found 2 JPA repository interfaces.
+""2020-01-13 12:40:43 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 12:40:43 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 12:40:43 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 12:40:43 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 12:40:43 - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+""2020-01-13 12:40:44 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 12:40:44 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 12:40:44 - Starting service [Tomcat]
+""2020-01-13 12:40:44 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 12:40:44 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 12:40:44 - Root WebApplicationContext: initialization completed in 1970 ms
+""2020-01-13 12:40:44 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 12:40:44 - HHH000412: Hibernate Core {5.4.9.Final}
+""2020-01-13 12:40:45 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-01-13 12:40:45 - HikariPool-1 - Starting...
+""2020-01-13 12:40:45 - HikariPool-1 - Start completed.
+""2020-01-13 12:40:45 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 12:40:46 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 12:40:46 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 12:40:46 - LiveReload server is running on port 35729
+""2020-01-13 12:40:46 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 12:40:46 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 12:40:46 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 12:40:47 - Context refreshed
+""2020-01-13 12:40:47 - Found 1 custom documentation plugin(s)
+""2020-01-13 12:40:47 - Scanning for api listing references
+""2020-01-13 12:40:47 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 12:40:47 - Started FundoonotesApplication in 5.442 seconds (JVM running for 6.708)
+""2020-01-13 12:59:00 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 12:59:00 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 12:59:00 - HikariPool-1 - Shutdown initiated...
+""2020-01-13 12:59:00 - HikariPool-1 - Shutdown completed.
+""2020-01-13 12:59:01 - Starting FundoonotesApplication on mobicomp-desktop with PID 20874 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 12:59:01 - No active profile set, falling back to default profiles: default
+""2020-01-13 12:59:01 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 12:59:01 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 12:59:01 - Finished Spring Data repository scanning in 8ms. Found 2 JPA repository interfaces.
+""2020-01-13 12:59:01 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 12:59:01 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 12:59:01 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 12:59:01 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 12:59:01 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 12:59:01 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 12:59:01 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 12:59:01 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 12:59:01 - Starting service [Tomcat]
+""2020-01-13 12:59:01 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 12:59:01 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 12:59:01 - Root WebApplicationContext: initialization completed in 291 ms
+""2020-01-13 12:59:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 12:59:01 - HikariPool-2 - Starting...
+""2020-01-13 12:59:01 - HikariPool-2 - Start completed.
+""2020-01-13 12:59:01 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 12:59:01 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 12:59:01 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 12:59:01 - LiveReload server is running on port 35729
+""2020-01-13 12:59:01 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 12:59:01 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 12:59:01 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 12:59:01 - Context refreshed
+""2020-01-13 12:59:01 - Found 1 custom documentation plugin(s)
+""2020-01-13 12:59:01 - Scanning for api listing references
+""2020-01-13 12:59:01 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 12:59:01 - Started FundoonotesApplication in 0.781 seconds (JVM running for 1100.957)
+""2020-01-13 12:59:01 - Condition evaluation unchanged
+""2020-01-13 13:00:30 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:00:30 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:00:30 - HikariPool-2 - Shutdown initiated...
+""2020-01-13 13:00:30 - HikariPool-2 - Shutdown completed.
+""2020-01-13 13:00:30 - Starting FundoonotesApplication on mobicomp-desktop with PID 20874 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 13:00:30 - No active profile set, falling back to default profiles: default
+""2020-01-13 13:00:30 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:00:30 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 13:00:30 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 13:00:30 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:00:30 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 13:00:30 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:00:30 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:00:30 - Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+""2020-01-13 13:00:30 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 13:00:30 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 13:00:30 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 13:00:30 - Starting service [Tomcat]
+""2020-01-13 13:00:30 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 13:00:30 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 13:00:30 - Root WebApplicationContext: initialization completed in 273 ms
+""2020-01-13 13:00:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 13:00:31 - HikariPool-3 - Starting...
+""2020-01-13 13:00:31 - HikariPool-3 - Start completed.
+""2020-01-13 13:00:31 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 13:00:31 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 13:00:31 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:00:31 - LiveReload server is running on port 35729
+""2020-01-13 13:00:31 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 13:00:31 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 13:00:31 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:00:31 - Context refreshed
+""2020-01-13 13:00:31 - Found 1 custom documentation plugin(s)
+""2020-01-13 13:00:31 - Scanning for api listing references
+""2020-01-13 13:00:31 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 13:00:31 - Started FundoonotesApplication in 0.767 seconds (JVM running for 1190.628)
+""2020-01-13 13:00:31 - Condition evaluation unchanged
+""2020-01-13 13:05:10 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:05:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:05:10 - HikariPool-3 - Shutdown initiated...
+""2020-01-13 13:05:10 - HikariPool-3 - Shutdown completed.
+""2020-01-13 13:05:11 - Starting FundoonotesApplication on mobicomp-desktop with PID 20874 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 13:05:11 - No active profile set, falling back to default profiles: default
+""2020-01-13 13:05:11 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:05:11 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 13:05:11 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 13:05:11 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:05:11 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 13:05:11 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:05:11 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:05:11 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 13:05:11 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 13:05:11 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 13:05:11 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 13:05:11 - Starting service [Tomcat]
+""2020-01-13 13:05:11 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 13:05:11 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 13:05:11 - Root WebApplicationContext: initialization completed in 261 ms
+""2020-01-13 13:05:11 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 13:05:11 - HikariPool-4 - Starting...
+""2020-01-13 13:05:11 - HikariPool-4 - Start completed.
+""2020-01-13 13:05:11 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 13:05:11 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 13:05:11 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:05:11 - LiveReload server is running on port 35729
+""2020-01-13 13:05:11 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 13:05:11 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 13:05:11 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:05:11 - Context refreshed
+""2020-01-13 13:05:11 - Found 1 custom documentation plugin(s)
+""2020-01-13 13:05:11 - Scanning for api listing references
+""2020-01-13 13:05:11 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 13:05:11 - Started FundoonotesApplication in 0.655 seconds (JVM running for 1470.926)
+""2020-01-13 13:05:11 - Condition evaluation unchanged
+""2020-01-13 13:05:17 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:05:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:05:17 - HikariPool-4 - Shutdown initiated...
+""2020-01-13 13:05:17 - HikariPool-4 - Shutdown completed.
+""2020-01-13 13:05:17 - Starting FundoonotesApplication on mobicomp-desktop with PID 20874 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 13:05:17 - No active profile set, falling back to default profiles: default
+""2020-01-13 13:05:17 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:05:17 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 13:05:17 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 13:05:17 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:05:17 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 13:05:17 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:05:17 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:05:17 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 13:05:17 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 13:05:17 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 13:05:17 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 13:05:17 - Starting service [Tomcat]
+""2020-01-13 13:05:17 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 13:05:17 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 13:05:17 - Root WebApplicationContext: initialization completed in 277 ms
+""2020-01-13 13:05:17 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 13:05:17 - HikariPool-5 - Starting...
+""2020-01-13 13:05:17 - HikariPool-5 - Start completed.
+""2020-01-13 13:05:17 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 13:05:17 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 13:05:17 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:05:17 - LiveReload server is running on port 35729
+""2020-01-13 13:05:17 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 13:05:17 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 13:05:17 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:05:17 - Context refreshed
+""2020-01-13 13:05:17 - Found 1 custom documentation plugin(s)
+""2020-01-13 13:05:17 - Scanning for api listing references
+""2020-01-13 13:05:17 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 13:05:17 - Started FundoonotesApplication in 0.679 seconds (JVM running for 1477.166)
+""2020-01-13 13:05:17 - Condition evaluation unchanged
+""2020-01-13 13:05:18 - Application shutdown requested.
+""2020-01-13 13:05:18 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:05:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:05:18 - HikariPool-5 - Shutdown initiated...
+""2020-01-13 13:05:18 - HikariPool-5 - Shutdown completed.
+""2020-01-13 13:05:25 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 13:05:25 - No active profile set, falling back to default profiles: default
+""2020-01-13 13:05:25 - The Class-Path manifest attribute in /home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/home/mobicomp/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+""2020-01-13 13:05:25 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2020-01-13 13:05:25 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2020-01-13 13:05:25 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:05:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 13:05:25 - Finished Spring Data repository scanning in 41ms. Found 2 JPA repository interfaces.
+""2020-01-13 13:05:25 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 13:05:25 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 13:05:25 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:05:25 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 13:05:25 - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+""2020-01-13 13:05:26 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 13:05:26 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 13:05:26 - Starting service [Tomcat]
+""2020-01-13 13:05:26 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 13:05:26 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 13:05:26 - Root WebApplicationContext: initialization completed in 1124 ms
+""2020-01-13 13:05:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 13:05:26 - HHH000412: Hibernate Core {5.4.9.Final}
+""2020-01-13 13:05:26 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-01-13 13:05:26 - HikariPool-1 - Starting...
+""2020-01-13 13:05:26 - HikariPool-1 - Start completed.
+""2020-01-13 13:05:26 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 13:05:27 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 13:05:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 13:05:27 - LiveReload server is running on port 35729
+""2020-01-13 13:05:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 13:05:27 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 13:05:27 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 13:05:28 - Context refreshed
+""2020-01-13 13:05:28 - Found 1 custom documentation plugin(s)
+""2020-01-13 13:05:28 - Scanning for api listing references
+""2020-01-13 13:05:28 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 13:05:28 - Started FundoonotesApplication in 3.622 seconds (JVM running for 4.175)
+""2020-01-13 13:05:44 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2020-01-13 13:05:44 - Initializing Servlet 'dispatcherServlet'
+""2020-01-13 13:05:44 - Completed initialization in 4 ms
+""2020-01-13 14:40:10 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:40:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:40:10 - HikariPool-1 - Shutdown initiated...
+""2020-01-13 14:40:10 - HikariPool-1 - Shutdown completed.
+""2020-01-13 14:40:10 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:40:10 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:40:10 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:40:10 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:40:10 - Finished Spring Data repository scanning in 8ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:40:10 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:40:10 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:40:10 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:40:10 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:40:10 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:40:10 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:40:10 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:40:10 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:40:10 - Starting service [Tomcat]
+""2020-01-13 14:40:10 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:40:10 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:40:10 - Root WebApplicationContext: initialization completed in 332 ms
+""2020-01-13 14:40:10 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:40:10 - HikariPool-2 - Starting...
+""2020-01-13 14:40:10 - HikariPool-2 - Start completed.
+""2020-01-13 14:40:10 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:40:10 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:40:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:40:10 - LiveReload server is running on port 35729
+""2020-01-13 14:40:10 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:40:10 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:40:10 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:40:10 - Context refreshed
+""2020-01-13 14:40:10 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:40:11 - Scanning for api listing references
+""2020-01-13 14:40:11 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:40:11 - Started FundoonotesApplication in 0.809 seconds (JVM running for 5686.755)
+""2020-01-13 14:40:11 - Condition evaluation unchanged
+""2020-01-13 14:49:45 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:49:45 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:49:45 - HikariPool-2 - Shutdown initiated...
+""2020-01-13 14:49:45 - HikariPool-2 - Shutdown completed.
+""2020-01-13 14:49:46 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:49:46 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:49:46 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:49:46 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:49:46 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:49:46 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:49:46 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:49:46 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:49:46 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:49:46 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:49:46 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:49:46 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:49:46 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:49:46 - Starting service [Tomcat]
+""2020-01-13 14:49:46 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:49:46 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:49:46 - Root WebApplicationContext: initialization completed in 264 ms
+""2020-01-13 14:49:46 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:49:46 - HikariPool-3 - Starting...
+""2020-01-13 14:49:46 - HikariPool-3 - Start completed.
+""2020-01-13 14:49:46 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:49:46 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:49:46 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:49:46 - LiveReload server is running on port 35729
+""2020-01-13 14:49:46 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:49:46 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:49:46 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:49:46 - Context refreshed
+""2020-01-13 14:49:46 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:49:46 - Scanning for api listing references
+""2020-01-13 14:49:46 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:49:46 - Started FundoonotesApplication in 0.659 seconds (JVM running for 6262.396)
+""2020-01-13 14:49:46 - Condition evaluation unchanged
+""2020-01-13 14:56:53 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:56:53 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:56:53 - HikariPool-3 - Shutdown initiated...
+""2020-01-13 14:56:53 - HikariPool-3 - Shutdown completed.
+""2020-01-13 14:56:53 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:56:53 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:56:53 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:56:53 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:56:53 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:56:53 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:56:53 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:56:53 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:56:53 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:56:53 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:56:53 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:56:53 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:56:53 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:56:53 - Starting service [Tomcat]
+""2020-01-13 14:56:53 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:56:53 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:56:53 - Root WebApplicationContext: initialization completed in 304 ms
+""2020-01-13 14:56:53 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:56:53 - HikariPool-4 - Starting...
+""2020-01-13 14:56:53 - HikariPool-4 - Start completed.
+""2020-01-13 14:56:53 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:56:53 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:56:53 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:56:53 - LiveReload server is running on port 35729
+""2020-01-13 14:56:53 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:56:53 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:56:53 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:56:53 - Context refreshed
+""2020-01-13 14:56:53 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:56:53 - Scanning for api listing references
+""2020-01-13 14:56:53 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:56:53 - Started FundoonotesApplication in 0.698 seconds (JVM running for 6689.591)
+""2020-01-13 14:56:53 - Condition evaluation unchanged
+""2020-01-13 14:57:57 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:57:57 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:57:57 - HikariPool-4 - Shutdown initiated...
+""2020-01-13 14:57:57 - HikariPool-4 - Shutdown completed.
+""2020-01-13 14:57:57 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:57:57 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:57:57 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:57:57 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:57:57 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:57:57 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:57:57 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:57:57 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:57:57 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:57:57 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:57:57 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:57:57 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:57:57 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:57:57 - Starting service [Tomcat]
+""2020-01-13 14:57:57 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:57:57 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:57:57 - Root WebApplicationContext: initialization completed in 268 ms
+""2020-01-13 14:57:57 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:57:57 - HikariPool-5 - Starting...
+""2020-01-13 14:57:57 - HikariPool-5 - Start completed.
+""2020-01-13 14:57:57 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:57:58 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:57:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:57:58 - LiveReload server is running on port 35729
+""2020-01-13 14:57:58 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:57:58 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:57:58 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:57:58 - Context refreshed
+""2020-01-13 14:57:58 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:57:58 - Scanning for api listing references
+""2020-01-13 14:57:58 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:57:58 - Started FundoonotesApplication in 0.642 seconds (JVM running for 6754.012)
+""2020-01-13 14:57:58 - Condition evaluation unchanged
+""2020-01-13 14:58:19 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:58:19 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:58:19 - HikariPool-5 - Shutdown initiated...
+""2020-01-13 14:58:19 - HikariPool-5 - Shutdown completed.
+""2020-01-13 14:58:19 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:58:19 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:58:20 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:58:20 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:58:20 - Finished Spring Data repository scanning in 8ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:58:20 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:58:20 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:58:20 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:58:20 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:58:20 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:58:20 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:58:20 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:58:20 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:58:20 - Starting service [Tomcat]
+""2020-01-13 14:58:20 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:58:20 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:58:20 - Root WebApplicationContext: initialization completed in 275 ms
+""2020-01-13 14:58:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:58:20 - HikariPool-6 - Starting...
+""2020-01-13 14:58:20 - HikariPool-6 - Start completed.
+""2020-01-13 14:58:20 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:58:20 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:58:20 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:58:20 - LiveReload server is running on port 35729
+""2020-01-13 14:58:20 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:58:20 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:58:20 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:58:20 - Context refreshed
+""2020-01-13 14:58:20 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:58:20 - Scanning for api listing references
+""2020-01-13 14:58:20 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:58:20 - Started FundoonotesApplication in 0.66 seconds (JVM running for 6776.238)
+""2020-01-13 14:58:20 - Condition evaluation unchanged
+""2020-01-13 14:58:58 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:58:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:58:58 - HikariPool-6 - Shutdown initiated...
+""2020-01-13 14:58:58 - HikariPool-6 - Shutdown completed.
+""2020-01-13 14:58:58 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:58:58 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:58:58 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:58:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:58:58 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:58:58 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:58:58 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:58:58 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:58:58 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:58:58 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:58:58 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:58:58 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:58:58 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:58:58 - Starting service [Tomcat]
+""2020-01-13 14:58:58 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:58:58 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:58:58 - Root WebApplicationContext: initialization completed in 279 ms
+""2020-01-13 14:58:58 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:58:58 - HikariPool-7 - Starting...
+""2020-01-13 14:58:58 - HikariPool-7 - Start completed.
+""2020-01-13 14:58:58 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:58:58 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:58:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:58:58 - LiveReload server is running on port 35729
+""2020-01-13 14:58:58 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:58:58 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:58:58 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:58:58 - Context refreshed
+""2020-01-13 14:58:58 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:58:58 - Scanning for api listing references
+""2020-01-13 14:58:58 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:58:58 - Started FundoonotesApplication in 0.657 seconds (JVM running for 6814.584)
+""2020-01-13 14:58:58 - Condition evaluation unchanged
+""2020-01-13 14:59:23 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:59:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:59:23 - HikariPool-7 - Shutdown initiated...
+""2020-01-13 14:59:23 - HikariPool-7 - Shutdown completed.
+""2020-01-13 14:59:23 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:59:23 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:59:23 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:59:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:59:23 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:59:23 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:59:23 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:59:23 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:59:23 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:59:23 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:59:23 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:59:23 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:59:23 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:59:23 - Starting service [Tomcat]
+""2020-01-13 14:59:23 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:59:23 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:59:23 - Root WebApplicationContext: initialization completed in 262 ms
+""2020-01-13 14:59:23 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:59:23 - HikariPool-8 - Starting...
+""2020-01-13 14:59:23 - HikariPool-8 - Start completed.
+""2020-01-13 14:59:23 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:59:23 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:59:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:59:23 - LiveReload server is running on port 35729
+""2020-01-13 14:59:23 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:59:23 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:59:24 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:59:24 - Context refreshed
+""2020-01-13 14:59:24 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:59:24 - Scanning for api listing references
+""2020-01-13 14:59:24 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:59:24 - Started FundoonotesApplication in 0.635 seconds (JVM running for 6839.814)
+""2020-01-13 14:59:24 - Condition evaluation unchanged
+""2020-01-13 14:59:36 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:59:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:59:36 - HikariPool-8 - Shutdown initiated...
+""2020-01-13 14:59:36 - HikariPool-8 - Shutdown completed.
+""2020-01-13 14:59:36 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:59:36 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:59:36 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:59:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:59:36 - Finished Spring Data repository scanning in 7ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:59:36 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:59:36 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:59:36 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:59:36 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:59:36 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:59:36 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:59:36 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:59:36 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:59:36 - Starting service [Tomcat]
+""2020-01-13 14:59:36 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:59:36 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:59:36 - Root WebApplicationContext: initialization completed in 274 ms
+""2020-01-13 14:59:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:59:37 - HikariPool-9 - Starting...
+""2020-01-13 14:59:37 - HikariPool-9 - Start completed.
+""2020-01-13 14:59:37 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:59:37 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:59:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:59:37 - LiveReload server is running on port 35729
+""2020-01-13 14:59:37 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:59:37 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:59:37 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:59:37 - Context refreshed
+""2020-01-13 14:59:37 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:59:37 - Scanning for api listing references
+""2020-01-13 14:59:37 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:59:37 - Started FundoonotesApplication in 0.644 seconds (JVM running for 6853.035)
+""2020-01-13 14:59:37 - Condition evaluation unchanged
+""2020-01-13 14:59:46 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:59:46 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:59:46 - HikariPool-9 - Shutdown initiated...
+""2020-01-13 14:59:46 - HikariPool-9 - Shutdown completed.
+""2020-01-13 14:59:46 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 14:59:46 - No active profile set, falling back to default profiles: default
+""2020-01-13 14:59:47 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:59:47 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 14:59:47 - Finished Spring Data repository scanning in 6ms. Found 2 JPA repository interfaces.
+""2020-01-13 14:59:47 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 14:59:47 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 14:59:47 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:59:47 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 14:59:47 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 14:59:47 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 14:59:47 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 14:59:47 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 14:59:47 - Starting service [Tomcat]
+""2020-01-13 14:59:47 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 14:59:47 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 14:59:47 - Root WebApplicationContext: initialization completed in 277 ms
+""2020-01-13 14:59:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 14:59:47 - HikariPool-10 - Starting...
+""2020-01-13 14:59:47 - HikariPool-10 - Start completed.
+""2020-01-13 14:59:47 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 14:59:47 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 14:59:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 14:59:47 - LiveReload server is running on port 35729
+""2020-01-13 14:59:47 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 14:59:47 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 14:59:47 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 14:59:47 - Context refreshed
+""2020-01-13 14:59:47 - Found 1 custom documentation plugin(s)
+""2020-01-13 14:59:47 - Scanning for api listing references
+""2020-01-13 14:59:47 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 14:59:47 - Started FundoonotesApplication in 0.703 seconds (JVM running for 6863.309)
+""2020-01-13 14:59:47 - Condition evaluation unchanged
+""2020-01-13 15:00:21 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 15:00:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:00:21 - HikariPool-10 - Shutdown initiated...
+""2020-01-13 15:00:21 - HikariPool-10 - Shutdown completed.
+""2020-01-13 15:00:21 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 15:00:21 - No active profile set, falling back to default profiles: default
+""2020-01-13 15:00:21 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:00:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 15:00:21 - Finished Spring Data repository scanning in 8ms. Found 2 JPA repository interfaces.
+""2020-01-13 15:00:21 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:00:21 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 15:00:21 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:00:21 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:00:21 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 15:00:21 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 15:00:21 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 15:00:21 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 15:00:21 - Starting service [Tomcat]
+""2020-01-13 15:00:21 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 15:00:21 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 15:00:21 - Root WebApplicationContext: initialization completed in 261 ms
+""2020-01-13 15:00:21 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 15:00:21 - HikariPool-11 - Starting...
+""2020-01-13 15:00:21 - HikariPool-11 - Start completed.
+""2020-01-13 15:00:21 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 15:00:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 15:00:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:00:21 - LiveReload server is running on port 35729
+""2020-01-13 15:00:21 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 15:00:21 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""2020-01-13 15:00:21 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-01-13 15:00:21 - Context refreshed
+""2020-01-13 15:00:21 - Found 1 custom documentation plugin(s)
+""2020-01-13 15:00:21 - Scanning for api listing references
+""2020-01-13 15:00:21 - Tomcat started on port(s): 8080 (http) with context path ''
+""2020-01-13 15:00:21 - Started FundoonotesApplication in 0.606 seconds (JVM running for 6897.565)
+""2020-01-13 15:00:21 - Condition evaluation unchanged
+""2020-01-13 15:01:01 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-01-13 15:01:01 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:01:01 - HikariPool-11 - Shutdown initiated...
+""2020-01-13 15:01:01 - HikariPool-11 - Shutdown completed.
+""2020-01-13 15:01:01 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 15:01:01 - No active profile set, falling back to default profiles: default
+""2020-01-13 15:01:01 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:01:01 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 15:01:01 - Finished Spring Data repository scanning in 8ms. Found 3 JPA repository interfaces.
+""2020-01-13 15:01:01 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:01:01 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 15:01:01 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LabelRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:01:01 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:01:01 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:01:01 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 15:01:01 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 15:01:01 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 15:01:01 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 15:01:01 - Starting service [Tomcat]
+""2020-01-13 15:01:01 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 15:01:01 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 15:01:01 - Root WebApplicationContext: initialization completed in 247 ms
+""2020-01-13 15:01:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 15:01:01 - HikariPool-12 - Starting...
+""2020-01-13 15:01:01 - HikariPool-12 - Start completed.
+""2020-01-13 15:01:01 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 15:01:01 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 15:01:01 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:01:01 - LiveReload server is running on port 35729
+""2020-01-13 15:01:01 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-01-13 15:01:01 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/home/mobicomp/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/home/mobicomp/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+""2020-01-13 15:01:02 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:01:02 - HikariPool-12 - Shutdown initiated...
+""2020-01-13 15:01:02 - HikariPool-12 - Shutdown completed.
+""2020-01-13 15:01:02 - Stopping service [Tomcat]
+""2020-01-13 15:01:02 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-01-13 15:01:02 - Application run failed
+" org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/home/mobicomp/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/home/mobicomp/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at com.bridgelabz.fundoonotes.FundoonotesApplication.main(FundoonotesApplication.java:10) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_232]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_232]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_232]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_232]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/home/mobicomp/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 24 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through method 'requestMappingHandlerMapping' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 24 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'labelRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1114) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.data.repository.support.Repositories.cacheRepositoryFactory(Repositories.java:99) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.support.Repositories.populateRepositoryFactoryInformation(Repositories.java:92) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.support.Repositories.<init>(Repositories.java:85) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.support.DomainClassConverter.setApplicationContext(DomainClassConverter.java:109) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.web.config.SpringDataWebConfiguration.addFormatters(SpringDataWebConfiguration.java:131) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:81) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:78) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.mvcConversionService(WebMvcAutoConfiguration.java:428) ~[spring-boot-autoconfigure-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_232]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_232]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_232]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_232]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 24 more
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.String
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-5.4.9.Final.jar:5.4.9.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.4.9.Final.jar:5.4.9.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:74) ~[spring-data-jpa-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:211) ~[spring-data-jpa-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:161) ~[spring-data-jpa-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:144) ~[spring-data-jpa-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:69) ~[spring-data-jpa-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:312) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:212) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:94) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121) ~[spring-data-jpa-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1114) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.data.repository.support.Repositories.cacheRepositoryFactory(Repositories.java:99) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.support.Repositories.populateRepositoryFactoryInformation(Repositories.java:92) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.support.Repositories.<init>(Repositories.java:85) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.repository.support.DomainClassConverter.setApplicationContext(DomainClassConverter.java:109) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.data.web.config.SpringDataWebConfiguration.addFormatters(SpringDataWebConfiguration.java:131) ~[spring-data-commons-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:81) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:78) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.mvcConversionService(WebMvcAutoConfiguration.java:428) ~[spring-boot-autoconfigure-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_232]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_232]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_232]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_232]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1503) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1467) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1358) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1245) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 24 more
+"2020-01-13 15:07:48 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 15:07:48 - No active profile set, falling back to default profiles: default
+""2020-01-13 15:07:48 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:07:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 15:07:48 - Finished Spring Data repository scanning in 8ms. Found 3 JPA repository interfaces.
+""2020-01-13 15:07:48 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:07:48 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 15:07:48 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LabelRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:07:48 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:07:48 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:07:48 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 15:07:48 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 15:07:48 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 15:07:48 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 15:07:48 - Starting service [Tomcat]
+""2020-01-13 15:07:48 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 15:07:48 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 15:07:48 - Root WebApplicationContext: initialization completed in 263 ms
+""2020-01-13 15:07:48 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 15:07:48 - HikariPool-13 - Starting...
+""2020-01-13 15:07:48 - HikariPool-13 - Start completed.
+""2020-01-13 15:07:48 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 15:07:48 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 15:07:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:07:48 - LiveReload server is running on port 35729
+""2020-01-13 15:07:48 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'labelController': Unsatisfied dependency expressed through field 'labelServiceInf'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2020-01-13 15:07:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:07:48 - HikariPool-13 - Shutdown initiated...
+""2020-01-13 15:07:48 - HikariPool-13 - Shutdown completed.
+""2020-01-13 15:07:48 - Stopping service [Tomcat]
+""2020-01-13 15:07:48 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-01-13 15:07:48 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field labelServiceInf in com.bridgelabz.fundoonotes.controller.LabelController required a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' in your configuration.
+
+""2020-01-13 15:07:50 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 15:07:50 - No active profile set, falling back to default profiles: default
+""2020-01-13 15:07:50 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:07:50 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 15:07:50 - Finished Spring Data repository scanning in 7ms. Found 3 JPA repository interfaces.
+""2020-01-13 15:07:50 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:07:50 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 15:07:50 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LabelRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:07:50 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:07:50 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:07:50 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 15:07:50 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 15:07:50 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 15:07:50 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 15:07:50 - Starting service [Tomcat]
+""2020-01-13 15:07:50 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 15:07:50 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 15:07:50 - Root WebApplicationContext: initialization completed in 241 ms
+""2020-01-13 15:07:50 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 15:07:50 - HikariPool-14 - Starting...
+""2020-01-13 15:07:50 - HikariPool-14 - Start completed.
+""2020-01-13 15:07:50 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 15:07:50 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 15:07:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:07:50 - LiveReload server is running on port 35729
+""2020-01-13 15:07:50 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'labelController': Unsatisfied dependency expressed through field 'labelServiceInf'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2020-01-13 15:07:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:07:50 - HikariPool-14 - Shutdown initiated...
+""2020-01-13 15:07:50 - HikariPool-14 - Shutdown completed.
+""2020-01-13 15:07:50 - Stopping service [Tomcat]
+""2020-01-13 15:07:50 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-01-13 15:07:50 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field labelServiceInf in com.bridgelabz.fundoonotes.controller.LabelController required a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' in your configuration.
+
+""2020-01-13 15:09:26 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 15:09:26 - No active profile set, falling back to default profiles: default
+""2020-01-13 15:09:26 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:09:26 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 15:09:26 - Finished Spring Data repository scanning in 8ms. Found 3 JPA repository interfaces.
+""2020-01-13 15:09:26 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:09:26 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 15:09:26 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LabelRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:09:26 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:09:26 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:09:26 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 15:09:26 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 15:09:26 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 15:09:26 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 15:09:26 - Starting service [Tomcat]
+""2020-01-13 15:09:26 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 15:09:26 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 15:09:26 - Root WebApplicationContext: initialization completed in 244 ms
+""2020-01-13 15:09:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 15:09:26 - HikariPool-15 - Starting...
+""2020-01-13 15:09:26 - HikariPool-15 - Start completed.
+""2020-01-13 15:09:26 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 15:09:26 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 15:09:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:09:26 - LiveReload server is running on port 35729
+""2020-01-13 15:09:26 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'labelController': Unsatisfied dependency expressed through field 'labelServiceInf'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2020-01-13 15:09:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:09:26 - HikariPool-15 - Shutdown initiated...
+""2020-01-13 15:09:26 - HikariPool-15 - Shutdown completed.
+""2020-01-13 15:09:26 - Stopping service [Tomcat]
+""2020-01-13 15:09:26 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-01-13 15:09:26 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field labelServiceInf in com.bridgelabz.fundoonotes.controller.LabelController required a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' in your configuration.
+
+""2020-01-13 15:27:38 - Starting FundoonotesApplication on mobicomp-desktop with PID 30632 (/home/mobicomp/Downloads/Fundoonotes/target/classes started by mobicomp in /home/mobicomp/Downloads/Fundoonotes)
+""2020-01-13 15:27:38 - No active profile set, falling back to default profiles: default
+""2020-01-13 15:27:38 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:27:38 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-01-13 15:27:38 - Finished Spring Data repository scanning in 9ms. Found 3 JPA repository interfaces.
+""2020-01-13 15:27:38 - Multiple Spring Data modules found, entering strict repository configuration mode!
+""2020-01-13 15:27:38 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+""2020-01-13 15:27:38 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.LabelRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:27:38 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.NoteRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:27:38 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.fundoonotes.repository.UserRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+""2020-01-13 15:27:38 - Finished Spring Data repository scanning in 2ms. Found 0 Redis repository interfaces.
+""2020-01-13 15:27:38 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-01-13 15:27:38 - The MBean registry cannot be disabled because it has already been initialised
+""2020-01-13 15:27:38 - Tomcat initialized with port(s): 8080 (http)
+""2020-01-13 15:27:38 - Starting service [Tomcat]
+""2020-01-13 15:27:38 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-01-13 15:27:38 - Initializing Spring embedded WebApplicationContext
+""2020-01-13 15:27:38 - Root WebApplicationContext: initialization completed in 256 ms
+""2020-01-13 15:27:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-01-13 15:27:38 - HikariPool-16 - Starting...
+""2020-01-13 15:27:38 - HikariPool-16 - Start completed.
+""2020-01-13 15:27:38 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-01-13 15:27:38 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-01-13 15:27:38 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:27:38 - LiveReload server is running on port 35729
+""2020-01-13 15:27:38 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'labelController': Unsatisfied dependency expressed through field 'labelServiceInf'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2020-01-13 15:27:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-01-13 15:27:38 - HikariPool-16 - Shutdown initiated...
+""2020-01-13 15:27:38 - HikariPool-16 - Shutdown completed.
+""2020-01-13 15:27:38 - Stopping service [Tomcat]
+""2020-01-13 15:27:38 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-01-13 15:27:38 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field labelServiceInf in com.bridgelabz.fundoonotes.controller.LabelController required a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.bridgelabz.fundoonotes.service.LabelServiceInf' in your configuration.
+
 "

@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
@@ -33,6 +35,9 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	private UserRepository userRepository;
 
 	private ReminderDto reminderDto = new ReminderDto();
+	
+	@Autowired
+	private RedisTemplate<String,Object> redis;
 
 	@Override
 	public Notes save(NoteDto noteDto, String token) {
@@ -71,8 +76,11 @@ public class NoteServiceImplementation implements NoteServiceInf {
 		try {
 			Notes noteOne=verify(token);
 			System.out.println("Inside");
+			ValueOperations<String, Object> userIdOne=redis.opsForValue();
+			System.out.println(userIdOne+" userIdOne" );
 			long userId = jwtGenerator.parse(token);
 			System.out.println("User Id:" + userId + " Token:" + token + "Note Id:" + note_id);
+			
 			Notes note = noteRepository.findById(note_id);
 			System.out.println(note);
 			if (note.getIsPinned()) {
