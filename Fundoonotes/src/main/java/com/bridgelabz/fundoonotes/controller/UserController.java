@@ -15,15 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
 import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
+import com.bridgelabz.fundoonotes.exception.UserException;
 import com.bridgelabz.fundoonotes.model.User;
-import com.bridgelabz.fundoonotes.responses.Responses;
+import com.bridgelabz.fundoonotes.response.Responses;
 import com.bridgelabz.fundoonotes.service.UserServiceInf;
 import com.bridgelabz.fundoonotes.utility.JwtGenerator;
 
 @RestController("/user")
-public class RegisterController {
+public class UserController {
 
-	private Logger logger = LoggerFactory.getLogger(RegisterController.class);
+	private Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	@Autowired
 	private UserServiceInf service;
@@ -32,7 +33,7 @@ public class RegisterController {
 	private JwtGenerator jwtGenerator;
 
 	@PostMapping("/register")
-	public ResponseEntity<Responses> register(@RequestBody UserDto userDto) {
+	public ResponseEntity<Responses> register(@RequestBody UserDto userDto) throws UserException {
 
 		User user = service.register(userDto);
 		if (user != null) {

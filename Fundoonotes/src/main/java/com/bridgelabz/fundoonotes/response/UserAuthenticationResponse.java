@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoonotes.responses;
+package com.bridgelabz.fundoonotes.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

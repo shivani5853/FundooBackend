@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoonotes.responses;
+package com.bridgelabz.fundoonotes.response;
 
 public class Responses {
 	private String message;

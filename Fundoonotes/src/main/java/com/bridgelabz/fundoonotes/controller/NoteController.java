@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bridgelabz.fundoonotes.dto.NoteDto;
 import com.bridgelabz.fundoonotes.dto.ReminderDto;
 import com.bridgelabz.fundoonotes.model.Notes;
-import com.bridgelabz.fundoonotes.responses.Responses;
+import com.bridgelabz.fundoonotes.response.Responses;
 import com.bridgelabz.fundoonotes.service.NoteServiceInf;
 
 import lombok.extern.slf4j.Slf4j;
