@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.bridgelabz.fundoonotes.dto.LabelDto;
 import com.bridgelabz.fundoonotes.model.Labels;
+import com.bridgelabz.fundoonotes.model.User;
 
 @Repository
 @Transactional
@@ -25,4 +25,6 @@ public interface LabelRepository extends JpaRepository<Labels, Long> {
 	@Query(value = "Delete from label where label_name=? and user_id=?", nativeQuery = true)
 	void deleteLabel(String label_Name, Long user_id);
 
+	@Query(value = "select * from label where label_name=? and user_id=?",nativeQuery = true)
+	Labels findById(Long label_Id,User user_id);
 }
