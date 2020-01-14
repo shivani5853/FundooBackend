@@ -2,6 +2,7 @@ package com.bridgelabz.fundoonotes.model;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -68,7 +70,7 @@ public class Notes {
 	private String reminder;
 
 	@ManyToOne
-	@JoinColumn(name = "UserId")
+	@JoinColumn(name = "userId")
 	private User noteUser;
 
 	@Column(columnDefinition = "boolean default false")
@@ -78,10 +80,13 @@ public class Notes {
 		this.title = title;
 		this.description = description;
 	}
-	
-	public void setupdateTime()
-	{
-		this.updateTime=new Date();
+
+	public void setupdateTime() {
+		this.updateTime = new Date();
 	}
+
+	@ManyToMany
+	@JoinTable(name = "Label_Note", joinColumns = @JoinColumn(name = "note_id", referencedColumnName = "note_id"), inverseJoinColumns = @JoinColumn(name = "label_note_id", referencedColumnName = "label_id"))
+	private List<Labels> labels;
 
 }

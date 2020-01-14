@@ -16,7 +16,7 @@ public class JwtGenerator {
 	public String jwtToken(long a) {
 		String token = null;
 		try {
-			token = JWT.create().withClaim("Id", a).sign(Algorithm.HMAC512(SCERET));
+			token = JWT.create().withClaim("userId", a).sign(Algorithm.HMAC512(SCERET));
 		} catch (IllegalArgumentException | JWTCreationException | UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
@@ -27,7 +27,7 @@ public class JwtGenerator {
 			throws JWTVerificationException, IllegalArgumentException, UnsupportedEncodingException {
 		Long userId = 0l;
 		if (string != null) {
-			userId = JWT.require(Algorithm.HMAC512(SCERET)).build().verify(string).getClaim("Id").asLong();
+			userId = JWT.require(Algorithm.HMAC512(SCERET)).build().verify(string).getClaim("userId").asLong();
 		}
 		return userId;
 	}

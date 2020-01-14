@@ -56,7 +56,7 @@ public class UserServiceImplementation implements UserServiceInf {
 		userRepository.save(user);
 		User isUserAvailableTwo = userRepository.FindByEmail(userDto.getEmail());
 		String email = user.getEmail();
-		String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailableTwo.getId());
+		String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailableTwo.getUserId());
 		mail.sendMail(email, response);
 		
 		return user;
@@ -119,7 +119,7 @@ public class UserServiceImplementation implements UserServiceInf {
 			try {
 				System.out.println("inside");
 				String response = "http://localhost:8080/updatePassword/"
-						+ jwtGenerator.jwtToken(isUserAvailable.getId());
+						+ jwtGenerator.jwtToken(isUserAvailable.getUserId());
 				mail.sendMail(email, response);
 				System.out.println("mail Send");
 				return user;

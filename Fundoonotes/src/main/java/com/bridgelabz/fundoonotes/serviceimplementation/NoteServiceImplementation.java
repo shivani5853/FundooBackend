@@ -72,22 +72,23 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	}
 
 	@Override
-	public Integer pinned(long note_id, String token) {
+	public Integer pinned(long noteId, String token) {
+		System.out.println("111");
 		try {
 			Notes noteOne=verify(token);
-			System.out.println("Inside");
-			ValueOperations<String, Object> userIdOne=redis.opsForValue();
-			System.out.println(userIdOne+" userIdOne" );
+//			System.out.println("Inside");
+//			ValueOperations<String, Object> userIdOne=redis.opsForValue();
+//			System.out.println(userIdOne+" userIdOne" );
 			long userId = jwtGenerator.parse(token);
-			System.out.println("User Id:" + userId + " Token:" + token + "Note Id:" + note_id);
+			System.out.println("User Id:" + userId + " Token:" + token + "Note Id:" + noteId);
 			
-			Notes note = noteRepository.findById(note_id);
+			Notes note = noteRepository.findById(noteId);
 			System.out.println(note);
 			if (note.getIsPinned()) {
-				noteRepository.setPinned(false, userId, note_id);
+				noteRepository.setPinned(false, userId, noteId);
 				return 1;
 			} else if (!note.getIsPinned()) {
-				noteRepository.setPinned(true, userId, note_id);
+				noteRepository.setPinned(true, userId, noteId);
 				return 0;
 			} else {
 				return -1;
@@ -150,7 +151,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				note.setReminder(reminderMe.getReminderStatus());
 				System.out.println(note);
 				note.setupdateTime();
-				noteRepository.remindMe(note.getReminderTime(), note.getReminder(), note.getUpdateTime(), user.getId(),
+				noteRepository.remindMe(note.getReminderTime(), note.getReminder(), note.getUpdateTime(), user.getUserId(),
 						noteId);
 				System.out.println(note.getReminder() + " " + note.getReminderTime() + " " + " " + note.getUpdateTime()
 						+ reminderDto.getReminder() + " " + reminderDto.getReminderStatus());
@@ -198,7 +199,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			long userId = jwtGenerator.parse(token);
 			System.out.println(token);
 			User isUserAvailable = userRepository.findById(userId);
-			System.out.println(isUserAvailable.getId());
+			System.out.println(isUserAvailable.getUserId());
 			if (isUserAvailable.isVerified()) {
 				Notes note = noteRepository.findById(noteId);
 				System.out.println(note.getNoteId() + " " + note.isVerified() + " " + note.getIsTrash());
@@ -241,8 +242,8 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			System.out.println(token);
 			User isUserVerified = userRepository.findById(noteId);
 			if (isUserVerified != null) {
-				System.out.println("Inside" + " " + isUserVerified.getId());
-				List<Notes> note = noteRepository.searchAllNotesByNoteId(isUserVerified.getId(), noteId);
+				System.out.println("Inside" + " " + isUserVerified.getUserId());
+				List<Notes> note = noteRepository.searchAllNotesByNoteId(isUserVerified.getUserId(), noteId);
 				for (Notes notes : note) {
 					System.out.println(notes.getDescription());
 				}

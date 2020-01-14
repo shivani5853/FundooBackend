@@ -26,8 +26,8 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private Long id;
+	@Column(name = "userId")
+	private Long userId;
 
 	@Column(name = "firstName", nullable = false)
 	@NotEmpty(message = "Invalied FirstName")

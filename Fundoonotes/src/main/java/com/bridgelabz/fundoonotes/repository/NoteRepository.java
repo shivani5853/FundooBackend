@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import com.bridgelabz.fundoonotes.dto.LabelDto;
 import com.bridgelabz.fundoonotes.model.Notes;
 
 @Repository
@@ -18,7 +19,7 @@ public interface NoteRepository extends JpaRepository<Notes, Long> {
 
 	@Modifying
 	@Transactional
-	@Query(value = "insert into notes(note_id,title,description,created_at,update_time ,  user_id,reminder,reminder_time,is_trash) values(?,?,?,?,?,?,?,?,?)", nativeQuery = true)
+	@Query(value = "insert into notes(note_id,title,description,created_at,update_time,user_id,reminder,reminder_time,is_trash) values(?,?,?,?,?,?,?,?,?)", nativeQuery = true)
 	public void insertData(Long note_id, String title, String description, LocalDateTime created_at, Date update_time,
 			Long userId, String reminder, LocalDateTime reminderTime,Boolean isTrash);
 
@@ -68,7 +69,9 @@ public interface NoteRepository extends JpaRepository<Notes, Long> {
 	@Modifying
 	@Transactional
 	@Query(value = "update notes set is_verified =true where note_id=?", nativeQuery = true)
-	void updateIsVarified(Long id);
+	public void updateIsVarified(Long id);
+
+	
 }
 
 

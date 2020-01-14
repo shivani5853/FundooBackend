@@ -48,9 +48,9 @@ public class NoteController {
 
 	@PutMapping("/pinned/{noteId}")
 	public ResponseEntity<Responses> pinnedNote(@RequestHeader("token") String token,
-			@PathVariable("noteId") Long note_id) throws Exception {
+			@PathVariable("noteId") Long noteId){
 		System.out.println(token);
-		Integer result = noteServiceInf.pinned(note_id, token);
+		Integer result = noteServiceInf.pinned(noteId, token);
 		System.out.println(result);
 		if (result == 1) {
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Sucessfully Unpinned", 200));

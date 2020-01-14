@@ -49,7 +49,7 @@ public class UserController {
 	public ResponseEntity<Responses> login(@RequestBody UserLoginDto userLogin) {
 		User user = service.login(userLogin);
 		if (user != null) {
-			String token = jwtGenerator.jwtToken(user.getId());
+			String token = jwtGenerator.jwtToken(user.getUserId());
 			return ResponseEntity.status(HttpStatus.ACCEPTED).header("Login Successfully", userLogin.getEmail())
 					.body(new Responses(token, 200, userLogin));
 

@@ -13,7 +13,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Query(value = "select * from user where email=?", nativeQuery = true)
 	User checkByEmail(String email);
 
-	@Query(value = "select * from user where id=?", nativeQuery = true)
+	@Query(value = "select * from user where user_id=?", nativeQuery = true)
 	User findById(long id);
 
 	@Query(value = "select * from user where email=?", nativeQuery = true)
@@ -21,7 +21,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 	@Modifying
 	@Transactional
-	@Query(value = "update user set is_verified =true where id=?", nativeQuery = true)
+	@Query(value = "update user set is_verified =true where user_id=?", nativeQuery = true)
 	void updateIsVarified(Long id);
 
 	@Query(value = "select * from user where password=?", nativeQuery = true)
@@ -29,7 +29,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 	@Modifying
 	@Transactional
-	@Query(value = "update user set password=? where id=?", nativeQuery = true)
+	@Query(value = "update user set password=? where user_id=?", nativeQuery = true)
 	void updatePassword(String password, Long id);
 
 }

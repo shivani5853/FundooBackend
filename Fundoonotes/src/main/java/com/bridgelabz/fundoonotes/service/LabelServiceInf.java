@@ -9,4 +9,6 @@ public interface LabelServiceInf {
 
 	public Labels create(LabelDto label,String token);
 
+	public Labels deleteLabel(LabelDto label, String token);
+
 }
