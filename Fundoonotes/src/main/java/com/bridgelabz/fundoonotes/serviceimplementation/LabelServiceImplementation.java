@@ -109,7 +109,7 @@ public class LabelServiceImplementation implements LabelServiceInf {
 						System.out.println("labelName" + labelName);
 //						labelNew.setLabelName(label.getLableName());
 
-						BeanUtils.copyProperties(label,labelNew);
+						BeanUtils.copyProperties(label, labelNew);
 
 						labelNew.setLabelUser(user);
 						System.out.println(labelNew);
@@ -123,6 +123,32 @@ public class LabelServiceImplementation implements LabelServiceInf {
 				return null;
 			}
 		} catch (JWTVerificationException | IllegalArgumentException | UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Labels updateLabel(String token, long noteId,long lableId) {
+		try {
+			long userId = jwtGenerator.parse(token);
+			User user = userRepository.findById(userId);
+			if (user != null) {
+				Notes note = noteRepository.findById(noteId);
+				System.out.println(note);
+				if (note != null) {
+					Labels label=new Labels();
+					label.setLabelId(lableId);
+					Labels labelNew=userRepository.findBylableId(label.getLabelId());
+					System.out.println(labelNew);
+					if(labelNew!=null)
+					{
+					labelRepository.updateLabel(label.getLabelName(),userId,lableId);
+					return label;
+					}
+				}
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;

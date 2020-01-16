@@ -11,4 +11,5 @@ import lombok.Setter;
 @AllArgsConstructor
 public class LabelDto {
 	private String lableName;
+	private long labelId;
 }

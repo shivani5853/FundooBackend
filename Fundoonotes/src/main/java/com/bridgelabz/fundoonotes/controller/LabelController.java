@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,15 +49,29 @@ public class LabelController {
 	}
 
 	@PostMapping("/mapToNote/{noteId}")
-	public ResponseEntity<Responses> labelMapToNote(@RequestBody LabelDto label,@RequestHeader("token") String token,@RequestHeader Long noteId)
-	{
+	public ResponseEntity<Responses> labelMapToNote(@RequestBody LabelDto label, @RequestHeader("token") String token,
+			@RequestHeader Long noteId) {
 		Labels result = labelServiceInf.labelMapToNote(label, token, noteId);
-		if(result!=null)
-		{
-			return ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Label Sucessfully Map with note!!!", 200));
-		}else {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong !!!",400));
+		if (result != null) {
+			return ResponseEntity.status(HttpStatus.ACCEPTED)
+					.body(new Responses("Label Sucessfully Map with note!!!", 200));
+		} else {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong !!!", 400));
 		}
 	}
-	
+
+	@PutMapping("/update")
+	public ResponseEntity<Responses> updateLabel(@RequestHeader("token") String token,
+			@RequestHeader long NoteId,@RequestHeader long LabelId) {
+		Labels result=labelServiceInf.updateLabel(token,NoteId,LabelId);
+		if(result!=null)
+		{
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Label update Sucessfully!!!",200));			
+		}
+		else
+		{
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something wents wrong!!!",400));
+		}
+
+	}
 }

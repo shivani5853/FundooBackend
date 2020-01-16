@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
+import com.bridgelabz.fundoonotes.model.Labels;
 import com.bridgelabz.fundoonotes.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
@@ -31,5 +32,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Transactional
 	@Query(value = "update user set password=? where user_id=?", nativeQuery = true)
 	void updatePassword(String password, Long id);
+
+	@Query(value = "select * from label where label_id=?",nativeQuery=true)
+	Labels findBylableId(long lableId);
 
 }

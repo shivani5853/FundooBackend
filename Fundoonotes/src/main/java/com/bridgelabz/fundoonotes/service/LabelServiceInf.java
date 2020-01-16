@@ -11,4 +11,6 @@ public interface LabelServiceInf {
 
 	public Labels labelMapToNote(LabelDto label, String token, long noteId);
 
+	public Labels updateLabel(String token, long noteId,long labelId);
+
 }
