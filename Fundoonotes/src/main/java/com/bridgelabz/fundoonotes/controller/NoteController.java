@@ -48,7 +48,7 @@ public class NoteController {
 
 	@PutMapping("/pinned/{noteId}")
 	public ResponseEntity<Responses> pinnedNote(@RequestHeader("token") String token,
-			@PathVariable("noteId") Long noteId){
+			@PathVariable("noteId") Long noteId) {
 		System.out.println(token);
 		Integer result = noteServiceInf.pinned(noteId, token);
 		System.out.println(result);
@@ -139,7 +139,7 @@ public class NoteController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Note not available", 400));
 		}
 	}
-	
+
 	@GetMapping("/searchNoteByNoteId/{noteId}")
 	public ResponseEntity<Responses> searchNoteByNoteId(@PathVariable("noteId") Long noteId,
 			@RequestHeader("token") String token) {

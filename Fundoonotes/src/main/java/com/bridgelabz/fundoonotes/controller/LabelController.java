@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoonotes.dto.LabelDto;
+import com.bridgelabz.fundoonotes.dto.NoteDto;
 import com.bridgelabz.fundoonotes.model.Labels;
 import com.bridgelabz.fundoonotes.response.Responses;
 import com.bridgelabz.fundoonotes.service.LabelServiceInf;
@@ -43,6 +44,18 @@ public class LabelController {
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Label deleted Sucessfully!!!", 200));
 		} else {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!", 400));
+		}
+	}
+
+	@PostMapping("/mapToNote/{noteId}")
+	public ResponseEntity<Responses> labelMapToNote(@RequestBody LabelDto label,@RequestHeader("token") String token,@RequestHeader Long noteId)
+	{
+		Labels result = labelServiceInf.labelMapToNote(label, token, noteId);
+		if(result!=null)
+		{
+			return ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Label Sucessfully Map with note!!!", 200));
+		}else {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong !!!",400));
 		}
 	}
 	

@@ -25,6 +25,7 @@ public interface LabelRepository extends JpaRepository<Labels, Long> {
 	@Query(value = "Delete from label where label_name=? and user_id=?", nativeQuery = true)
 	void deleteLabel(String label_Name, Long user_id);
 
-	@Query(value = "select * from label where label_name=? and user_id=?",nativeQuery = true)
-	Labels findById(Long label_Id,User user_id);
+	@Query(value = "select * from label where label_name=? and user_id=?", nativeQuery = true)
+	Labels findById(Long label_Id, User user_id);
+
 }
