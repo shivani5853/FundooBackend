@@ -16,4 +16,5 @@ public interface LabelNoteReopsitory extends JpaRepository<Notes, Long> {
 	@Modifying
 	@Query(value = "insert into label_note(note_id,label_note_id) values(?,?)", nativeQuery = true)
 	public void labelMapToNote(Long note_id, Long label_note_id);
+
 }

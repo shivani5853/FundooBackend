@@ -22,6 +22,7 @@ import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.response.Responses;
 import com.bridgelabz.fundoonotes.service.NoteServiceInf;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -33,6 +34,7 @@ public class NoteController {
 	private NoteServiceInf noteServiceInf;
 
 	@PostMapping("/create")
+	@ApiOperation(value="Api for create Note",response = Responses.class)
 	public ResponseEntity<Responses> createNote(@RequestBody NoteDto noteDto, @RequestHeader("token") String token)
 			throws Exception {
 
@@ -47,6 +49,7 @@ public class NoteController {
 	}
 
 	@PutMapping("/pinned/{noteId}")
+	@ApiOperation(value="Api for Pinned Note",response = Responses.class)
 	public ResponseEntity<Responses> pinnedNote(@RequestHeader("token") String token,
 			@PathVariable("noteId") Long noteId) {
 		System.out.println(token);
@@ -63,6 +66,7 @@ public class NoteController {
 	}
 
 	@PutMapping("/archive/{noteId}")
+	@ApiOperation(value="Api for archive Note",response = Responses.class)
 	public ResponseEntity<Responses> archiveNote(@RequestHeader("token") String token,
 			@PathVariable("noteId") Long note_id) throws Exception {
 		System.out.println(token);
@@ -79,6 +83,7 @@ public class NoteController {
 	}
 
 	@PutMapping("/colour/{noteId}")
+	@ApiOperation(value="Api for colour Note",response = Responses.class)
 	public ResponseEntity<Responses> colourNote(@RequestHeader("token") String token,
 			@PathVariable("noteId") Long note_id, @RequestParam("colour") String colour) throws Exception {
 		Notes result = noteServiceInf.colour(note_id, token, colour);

@@ -1,6 +1,7 @@
 package com.bridgelabz.fundoonotes.serviceimplementation;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.bridgelabz.fundoonotes.dto.LabelDto;
-import com.bridgelabz.fundoonotes.dto.NoteDto;
 import com.bridgelabz.fundoonotes.model.Labels;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.model.User;
@@ -100,7 +100,7 @@ public class LabelServiceImplementation implements LabelServiceInf {
 			if (user != null) {
 				if (note != null) {
 					String labelName = label.getLableName();
-					log.info(labelName);
+//					log.info(labelName);
 					System.out.println("labelName" + labelName);
 					Labels labelInfo = labelRepository.findByName(labelName);
 					System.out.println("labelInfo" + labelInfo);
@@ -129,7 +129,7 @@ public class LabelServiceImplementation implements LabelServiceInf {
 	}
 
 	@Override
-	public Labels updateLabel(String token, long noteId,long lableId) {
+	public Labels updateLabel(String token, long noteId, long lableId) {
 		try {
 			long userId = jwtGenerator.parse(token);
 			User user = userRepository.findById(userId);
@@ -137,17 +137,71 @@ public class LabelServiceImplementation implements LabelServiceInf {
 				Notes note = noteRepository.findById(noteId);
 				System.out.println(note);
 				if (note != null) {
-					Labels label=new Labels();
+					Labels label = new Labels();
 					label.setLabelId(lableId);
-					Labels labelNew=userRepository.findBylableId(label.getLabelId());
+					Labels labelNew = userRepository.findBylableId(label.getLabelId());
 					System.out.println(labelNew);
-					if(labelNew!=null)
-					{
-					labelRepository.updateLabel(label.getLabelName(),userId,lableId);
-					return label;
+					if (labelNew != null) {
+						labelRepository.updateLabel(label.getLabelName(), userId, lableId);
+						return label;
 					}
 				}
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Labels addLabel(String token, long noteId, long labelId) {
+		try {
+			System.out.println(token + " " + noteId + " " + labelId);
+			long userId = jwtGenerator.parse(token);
+			System.out.println(userId);
+			User user = userRepository.findById(userId);
+			System.out.println("user" + user.getEmail());
+			Notes note = noteRepository.findById(noteId);
+			System.out.println(note);
+			if (user != null) {
+				if (note != null) {
+					Labels label = new Labels();
+					label.setLabelId(labelId);
+					Labels labels = labelRepository.findById(label.getLabelId(), userId);
+					System.out.println(labels);
+					if (label != null) {
+						System.out.println("1");
+						Labels labelObject = labelRepository.findByNoteIdAndLabelId(label.getLabelId());
+						System.out.println(labelObject);
+						if (labelObject != null) {
+							labelNoteReopsitory.labelMapToNote(noteId, label.getLabelId());
+							System.out.println(labelNoteReopsitory);
+							return labelObject;
+						}
+
+					}
+
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+
+	@Override
+	public Labels getAllLabels(String token) {
+		try {
+			long userId = jwtGenerator.parse(token);
+			System.out.println(userId);
+			User isUserAvailable = userRepository.findById(userId);
+			if (isUserAvailable != null) {
+				List<Labels> label = labelRepository.findAllLabels(userId);
+
+				return (Labels) label;
+			}
+			return null;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

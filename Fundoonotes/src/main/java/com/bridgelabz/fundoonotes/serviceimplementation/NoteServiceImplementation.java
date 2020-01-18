@@ -16,6 +16,7 @@ import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.repository.NoteRepository;
 import com.bridgelabz.fundoonotes.repository.UserRepository;
+import com.bridgelabz.fundoonotes.service.ElasticsearchService;
 import com.bridgelabz.fundoonotes.service.NoteServiceInf;
 import com.bridgelabz.fundoonotes.utility.JwtGenerator;
 
@@ -24,6 +25,9 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class NoteServiceImplementation implements NoteServiceInf {
+
+	@Autowired
+	private ElasticsearchService elasticsearchService;
 
 	@Autowired
 	private JwtGenerator jwtGenerator;
@@ -35,9 +39,9 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	private UserRepository userRepository;
 
 	private ReminderDto reminderDto = new ReminderDto();
-	
+
 	@Autowired
-	private RedisTemplate<String,Object> redis;
+	private RedisTemplate<String, Object> redis;
 
 	@Override
 	public Notes save(NoteDto noteDto, String token) {
@@ -46,8 +50,9 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			System.out.println(token);
 			log.info("Id:" + id + " Note Description:" + noteDto.getDescription());
 			User user = userRepository.findById(id);
+			Notes note = null;
 			if (user != null) {
-				Notes note = new Notes(noteDto.getTitle(), noteDto.getDescription());
+				note = new Notes(noteDto.getTitle(), noteDto.getDescription());
 				note.setNoteUser(user);
 				note.setCreatedAt(LocalDateTime.now());
 				note.setIsArchive(false);
@@ -60,8 +65,12 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				noteRepository.insertData(note.getNoteId(), note.getTitle(), note.getDescription(), note.getCreatedAt(),
 						note.getUpdateTime(), id, note.getReminder(), note.getReminderTime(), note.getIsTrash());
 				System.out.println(note);
-				
-				return note;
+
+				if (noteRepository != null) {
+					System.out.println("1");
+					log.info(elasticsearchService.createNote(note));
+					return note;
+				}
 
 			}
 
@@ -75,20 +84,22 @@ public class NoteServiceImplementation implements NoteServiceInf {
 	public Integer pinned(long noteId, String token) {
 		System.out.println("111");
 		try {
-			Notes noteOne=verify(token);
+			Notes noteOne = verify(token);
 //			System.out.println("Inside");
 //			ValueOperations<String, Object> userIdOne=redis.opsForValue();
 //			System.out.println(userIdOne+" userIdOne" );
 			long userId = jwtGenerator.parse(token);
 			System.out.println("User Id:" + userId + " Token:" + token + "Note Id:" + noteId);
-			
+
 			Notes note = noteRepository.findById(noteId);
 			System.out.println(note);
 			if (note.getIsPinned()) {
 				noteRepository.setPinned(false, userId, noteId);
+				log.info(elasticsearchService.createNote(note));
 				return 1;
 			} else if (!note.getIsPinned()) {
 				noteRepository.setPinned(true, userId, noteId);
+				log.info(elasticsearchService.createNote(note));
 				return 0;
 			} else {
 				return -1;
@@ -109,11 +120,14 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			System.out.println(note);
 			if (note.getIsArchive()) {
 				noteRepository.setArchive(false, userId, noteId);
+				log.info(elasticsearchService.createNote(note));
 				return 1;
 			} else if (!note.getIsArchive()) {
+				log.info(elasticsearchService.createNote(note));
 				noteRepository.setArchive(true, userId, noteId);
 				return 0;
 			} else {
+				log.info(elasticsearchService.createNote(note));
 				return -1;
 			}
 		} catch (Exception e) {
@@ -130,6 +144,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			Notes note = noteRepository.findById(noteId);
 			System.out.println(userId);
 			noteRepository.setColour(colour, userId, noteId);
+			log.info(elasticsearchService.createNote(note));
 			return note;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -151,10 +166,11 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				note.setReminder(reminderMe.getReminderStatus());
 				System.out.println(note);
 				note.setupdateTime();
-				noteRepository.remindMe(note.getReminderTime(), note.getReminder(), note.getUpdateTime(), user.getUserId(),
-						noteId);
+				noteRepository.remindMe(note.getReminderTime(), note.getReminder(), note.getUpdateTime(),
+						user.getUserId(), noteId);
 				System.out.println(note.getReminder() + " " + note.getReminderTime() + " " + " " + note.getUpdateTime()
 						+ reminderDto.getReminder() + " " + reminderDto.getReminderStatus());
+				log.info(elasticsearchService.createNote(note));
 				return note;
 			}
 		} catch (Exception e) {
@@ -175,14 +191,17 @@ public class NoteServiceImplementation implements NoteServiceInf {
 					System.out.println(isNoteAvailable.getIsTrash());
 					noteRepository.setPinned(false, userId, noteId);
 					noteRepository.setDelete(false, userId, noteId);
+					log.info(elasticsearchService.createNote(isNoteAvailable));
 					return 1;
 				} else if (!isNoteAvailable.getIsTrash()) {
 					System.out.println(isNoteAvailable.getIsTrash());
 					noteRepository.setPinned(false, userId, noteId);
 					noteRepository.setDelete(true, userId, noteId);
+					log.info(elasticsearchService.createNote(isNoteAvailable));
 					return 0;
 				} else {
 					System.out.println(isNoteAvailable.getIsTrash());
+					log.info(elasticsearchService.createNote(isNoteAvailable));
 					return -1;
 				}
 			}
@@ -206,6 +225,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 
 				if (note.getIsTrash()) {
 					noteRepository.deleteNote(noteId, userId);
+					log.info(elasticsearchService.createNote(note));
 					return note;
 				}
 			}
@@ -226,6 +246,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				List<Notes> note = noteRepository.searchAllNoteByUserId(userId);
 				for (Notes notes : note) {
 					System.out.println(notes.getDescription());
+					log.info(elasticsearchService.createNote(notes));
 				}
 				return note;
 			}
@@ -246,6 +267,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 				List<Notes> note = noteRepository.searchAllNotesByNoteId(isUserVerified.getUserId(), noteId);
 				for (Notes notes : note) {
 					System.out.println(notes.getDescription());
+					log.info(elasticsearchService.createNote(notes));
 				}
 				return note;
 			}
@@ -254,6 +276,7 @@ public class NoteServiceImplementation implements NoteServiceInf {
 		}
 		return null;
 	}
+
 	@Override
 	public Notes verify(String token) {
 		try {
@@ -262,9 +285,11 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			if (!note.isVerified()) {
 				noteRepository.updateIsVarified(id);
 				System.out.println("save details");
+				log.info(elasticsearchService.createNote(note));
 				return note;
 			} else {
 				System.out.println("already varified");
+				log.info(elasticsearchService.createNote(note));
 				return note;
 			}
 		} catch (JWTVerificationException | IllegalArgumentException | UnsupportedEncodingException e) {

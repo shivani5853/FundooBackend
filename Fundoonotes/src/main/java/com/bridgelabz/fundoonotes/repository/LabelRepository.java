@@ -1,5 +1,7 @@
 package com.bridgelabz.fundoonotes.repository;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -25,11 +27,17 @@ public interface LabelRepository extends JpaRepository<Labels, Long> {
 	@Query(value = "Delete from label where label_name=? and user_id=?", nativeQuery = true)
 	void deleteLabel(String label_Name, Long user_id);
 
-	@Query(value = "select * from label where label_name=? and user_id=?", nativeQuery = true)
-	Labels findById(Long label_Id, User user_id);
+	@Query(value = "select * from label where label_id=? and user_id=?", nativeQuery = true)
+	Labels findById(Long label_Id, Long user_id);
 
 	@Modifying
-	@Query(value = "update label set label_name=? where user_id=? and label_id=?",nativeQuery = true)
-	void updateLabel(String labelName, long userId,long label_id);
+	@Query(value = "update label set label_name=? where user_id=? and label_id=?", nativeQuery = true)
+	void updateLabel(String labelName, long userId, long label_id);
+
+	@Query(value = "select * from label where label_id=?", nativeQuery = true)
+	Labels findByNoteIdAndLabelId(long labelId);
+
+	@Query(value = "select * from label where user_id=?", nativeQuery = true)
+	List<Labels> findAllLabels(long userId);
 
 }
