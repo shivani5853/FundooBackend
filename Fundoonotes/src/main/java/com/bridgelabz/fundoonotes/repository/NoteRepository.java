@@ -69,4 +69,10 @@ public interface NoteRepository extends JpaRepository<Notes, Long> {
 	@Query(value = "update notes set is_verified =true where note_id=?", nativeQuery = true)
 	public void updateIsVarified(Long id);
 
+	@Query(value = "select * from notes where titile=? and noteId=?",nativeQuery=true)
+	public List<Notes> findByTitle(String title, long noteId);
+
+	@Query(value = "select * from notes where title=?",nativeQuery = true)
+	public List<Notes> getAllTitle(String title);
+
 }

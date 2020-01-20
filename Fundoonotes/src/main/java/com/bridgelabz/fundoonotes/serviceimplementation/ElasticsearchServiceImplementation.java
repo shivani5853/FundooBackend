@@ -1,16 +1,30 @@
 package com.bridgelabz.fundoonotes.serviceimplementation;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import org.elasticsearch.action.delete.DeleteRequest;
+import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.search.SearchRequest;
+import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.action.update.UpdateRequest;
+import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoonotes.configuration.ElasticSearchConfig;
 import com.bridgelabz.fundoonotes.model.Notes;
+import com.bridgelabz.fundoonotes.repository.NoteRepository;
+import com.bridgelabz.fundoonotes.repository.UserRepository;
 import com.bridgelabz.fundoonotes.service.ElasticsearchService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -21,14 +35,39 @@ import lombok.extern.slf4j.Slf4j;
 public class ElasticsearchServiceImplementation implements ElasticsearchService {
 
 	@Autowired
-	private ObjectMapper objectMapper;
-
-	private static final String TYPE = "note";
-
-	private static final String INDEX = "bridgelabz";
+	private ElasticSearchConfig elasticSearchConfig;
 
 	@Autowired
-	private ElasticSearchConfig elasticSearchConfig;
+	private NoteRepository noteRepository;
+
+	@Autowired
+	private ObjectMapper objectMapper;
+
+	@Autowired
+	private UserRepository userRepository;
+
+	private static final String TYPE = "Notes";
+
+	private static final String INDEX = "Bridgelabz";
+
+	@Override
+	public List<Notes> searchNote(String title, long noteId) {
+		try {
+			Notes note = noteRepository.findById(noteId);
+			if (note != null) {
+				List<Notes> isTitlePresent = noteRepository.findByTitle(title, noteId);
+				if (isTitlePresent != null) {
+					return noteRepository.getAllTitle(title);
+				}
+			} else {
+				return null;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 	@Override
 	public String createNote(Notes note) {
@@ -47,18 +86,60 @@ public class ElasticsearchServiceImplementation implements ElasticsearchService 
 	}
 
 	@Override
-	public void updateNote(Long noteId) {
-
+	public void updateNote(long noteId) {
+		try {
+			Notes note = noteRepository.findById(noteId);
+			Map<String, Object> notemapper = objectMapper.convertValue(note, Map.class);
+			UpdateRequest updateRequest = new UpdateRequest(INDEX, TYPE, String.valueOf(note.getNoteId()))
+					.doc(notemapper);
+			UpdateResponse updateResponse = elasticSearchConfig.client().update(updateRequest, RequestOptions.DEFAULT);
+			log.info(updateResponse.getResult().name());
+		} catch (IOException e) {
+			log.warn(e.getMessage());
+		}
 	}
 
 	@Override
-	public String deleteNote(Long noteId) {
+	public String deleteNote(long noteId) {
+		try {
+			Notes note = noteRepository.findById(noteId);
+			DeleteRequest deleterequest = new DeleteRequest(INDEX, TYPE, String.valueOf(note.getNoteId()));
+			DeleteResponse deleteResponse = elasticSearchConfig.client().delete(deleterequest, RequestOptions.DEFAULT);
+			return deleteResponse.getResult().name();
+		} catch (IOException e) {
+			log.warn(e.getMessage());
+		}
 		return null;
 	}
 
 	@Override
-	public List<Notes> searchNote(String title) {
+	public List<Notes> searchTitle(String title) {
+		try {
+			SearchRequest searchrequest = new SearchRequest("Bridgelabz");
+			SearchSourceBuilder searchsource = new SearchSourceBuilder();
+			searchsource.query(QueryBuilders.matchQuery("Title", title));
+			searchrequest.source(searchsource);
+			SearchResponse searchresponse = elasticSearchConfig.client().search(searchrequest, RequestOptions.DEFAULT);
+			return getResult(searchresponse);
+		} catch (Exception e) {
+			log.error(e.getMessage());
+		}
 		return null;
+
 	}
 
+	private List<Notes> getResult(SearchResponse searchresponse) {
+		try {
+			SearchHit[] search = searchresponse.getHits().getHits();
+			List<Notes> note = new ArrayList<>();
+			if (search.length > 0) {
+				Arrays.stream(search)
+						.forEach(s -> note.add(objectMapper.convertValue(s.getSourceAsMap(), Notes.class)));
+			}
+			return note;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
