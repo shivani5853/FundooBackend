@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.fundoonotes.configuration.ElasticSearchConfig;
+import com.bridgelabz.fundoonotes.constant.Constant;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.repository.NoteRepository;
 import com.bridgelabz.fundoonotes.repository.UserRepository;
@@ -33,7 +34,9 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class ElasticsearchServiceImplementation implements ElasticsearchService {
-
+	
+	private Constant constant = new Constant();
+	
 	@Autowired
 	private ElasticSearchConfig elasticSearchConfig;
 
@@ -45,10 +48,6 @@ public class ElasticsearchServiceImplementation implements ElasticsearchService 
 
 	@Autowired
 	private UserRepository userRepository;
-
-	private static final String TYPE = "Notes";
-
-	private static final String INDEX = "Bridgelabz";
 
 	@Override
 	public List<Notes> searchNote(String title, long noteId) {
@@ -73,7 +72,7 @@ public class ElasticsearchServiceImplementation implements ElasticsearchService 
 	public String createNote(Notes note) {
 		try {
 			Map<String, Object> noteMapper = objectMapper.convertValue(note, Map.class);
-			IndexRequest indexRequest = new IndexRequest(INDEX, TYPE, String.valueOf(note.getNoteId()))
+			IndexRequest indexRequest = new IndexRequest(constant.INDEX, constant.TYPE, String.valueOf(note.getNoteId()))
 					.source(noteMapper);
 			IndexResponse indexResponse = elasticSearchConfig.client().index(indexRequest, RequestOptions.DEFAULT);
 			System.out.println(indexRequest + " " + indexResponse);
@@ -90,7 +89,7 @@ public class ElasticsearchServiceImplementation implements ElasticsearchService 
 		try {
 			Notes note = noteRepository.findById(noteId);
 			Map<String, Object> notemapper = objectMapper.convertValue(note, Map.class);
-			UpdateRequest updateRequest = new UpdateRequest(INDEX, TYPE, String.valueOf(note.getNoteId()))
+			UpdateRequest updateRequest = new UpdateRequest(constant.INDEX, constant.TYPE, String.valueOf(note.getNoteId()))
 					.doc(notemapper);
 			UpdateResponse updateResponse = elasticSearchConfig.client().update(updateRequest, RequestOptions.DEFAULT);
 			log.info(updateResponse.getResult().name());
@@ -103,7 +102,7 @@ public class ElasticsearchServiceImplementation implements ElasticsearchService 
 	public String deleteNote(long noteId) {
 		try {
 			Notes note = noteRepository.findById(noteId);
-			DeleteRequest deleterequest = new DeleteRequest(INDEX, TYPE, String.valueOf(note.getNoteId()));
+			DeleteRequest deleterequest = new DeleteRequest(constant.INDEX, constant.TYPE, String.valueOf(note.getNoteId()));
 			DeleteResponse deleteResponse = elasticSearchConfig.client().delete(deleterequest, RequestOptions.DEFAULT);
 			return deleteResponse.getResult().name();
 		} catch (IOException e) {

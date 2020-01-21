@@ -1,9 +1,13 @@
 package com.bridgelabz.fundoonotes.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -41,9 +45,28 @@ public class ProfilePicController {
 	@ApiOperation(value = "Api to update profile pic of User", response = Responses.class)
 	public ResponseEntity<Responses> updateProfilePic(@ModelAttribute MultipartFile file,
 			@RequestHeader("token") String token) {
-		ProfilePic profile=profilePicService.updateProfilePic(file,token);
-		return profile !=null ?ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Profile Pic update Sucessfully!!!", 200))
-				:ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!",400));
+		ProfilePic profile = profilePicService.updateProfilePic(file, token);
+		return profile != null
+				? ResponseEntity.status(HttpStatus.ACCEPTED)
+						.body(new Responses("Profile Pic update Sucessfully!!!", 200))
+				: ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!", 400));
 	}
 
+	@DeleteMapping("/deleteProfilePic")
+	@ApiOperation(value = "Api to delete Profile Pic", response = Responses.class)
+	public ResponseEntity<Responses> deleteProfilePic(@ModelAttribute MultipartFile file,
+			@RequestHeader("token") String token) {
+		ProfilePic result = profilePicService.deleteProfilePic(file, token);
+		return result != null
+				? ResponseEntity.status(HttpStatus.ACCEPTED)
+						.body(new Responses("Profile pic deleted Sucessfully!!!", 200))
+				: ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!", 400));
+	}
+	@GetMapping("/getProfilePic")
+	@ApiOperation(value = "Api to get Profile Pic",response = Responses.class)
+	public ResponseEntity<Responses> getProfilePic(@ModelAttribute MultipartFile file,@RequestHeader("token")String token){
+		List<ProfilePic> result=profilePicService.getProfilePic(file,token);
+		return result!=null ? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("All ProfilePic are",200)):
+			ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Something went wrong!!!",400));
+	}
 }

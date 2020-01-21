@@ -2,6 +2,7 @@ package com.bridgelabz.fundoonotes.serviceimplementation;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,6 +84,16 @@ public class ProfilePicServiceImplementation implements ProfilePicService {
 
 	@Override
 	public ProfilePic updateProfilePic(MultipartFile file, String token) {
+		return null;
+	}
+
+	@Override
+	public ProfilePic deleteProfilePic(MultipartFile file, String token) {
+		return null;
+	}
+
+	@Override
+	public List<ProfilePic> getProfilePic(MultipartFile file, String token) {
 		// TODO Auto-generated method stub
 		return null;
 	}
