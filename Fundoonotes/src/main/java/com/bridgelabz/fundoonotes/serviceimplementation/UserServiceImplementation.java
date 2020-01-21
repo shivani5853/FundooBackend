@@ -3,6 +3,7 @@ package com.bridgelabz.fundoonotes.serviceimplementation;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import org.elasticsearch.cli.UserException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
 import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
-import com.bridgelabz.fundoonotes.exception.UserException;
 import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.repository.UserRepository;
 import com.bridgelabz.fundoonotes.service.UserServiceInf;
@@ -40,12 +40,10 @@ public class UserServiceImplementation implements UserServiceInf {
 	@Autowired
 	private Springmail mail	;
 
-	private UserException userException=new UserException(); 
-
 	private UpdatePassword updatePassword = new UpdatePassword();
 
 	@Override
-	public User register(UserDto userDto) throws UserException {
+	public User register(UserDto userDto){
 		user.setFirstName(userDto.getFirstName());
 		user.setLastName(userDto.getLastName());
 		user.setEmail(userDto.getEmail());

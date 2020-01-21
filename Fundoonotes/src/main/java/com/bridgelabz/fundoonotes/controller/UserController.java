@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
 import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
-import com.bridgelabz.fundoonotes.exception.UserException;
 import com.bridgelabz.fundoonotes.model.User;
 import com.bridgelabz.fundoonotes.response.Responses;
 import com.bridgelabz.fundoonotes.service.UserServiceInf;
@@ -33,7 +32,7 @@ public class UserController {
 	private JwtGenerator jwtGenerator;
 
 	@PostMapping("/register")
-	public ResponseEntity<Responses> register(@RequestBody UserDto userDto) throws UserException {
+	public ResponseEntity<Responses> register(@RequestBody UserDto userDto){
 
 		User user = service.register(userDto);
 		if (user != null) {
