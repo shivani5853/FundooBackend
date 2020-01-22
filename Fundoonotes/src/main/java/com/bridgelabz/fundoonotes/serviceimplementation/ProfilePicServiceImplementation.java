@@ -84,17 +84,19 @@ public class ProfilePicServiceImplementation implements ProfilePicService {
 
 	@Override
 	public ProfilePic updateProfilePic(MultipartFile file, String token) {
+		
 		return null;
 	}
 
 	@Override
 	public ProfilePic deleteProfilePic(MultipartFile file, String token) {
+		
 		return null;
 	}
 
 	@Override
 	public List<ProfilePic> getProfilePic(MultipartFile file, String token) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 	
