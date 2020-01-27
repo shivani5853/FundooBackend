@@ -1,19 +1,18 @@
 package com.bridgelabz.fundoonotes.service;
 
-import java.util.List;
-
 import org.springframework.web.multipart.MultipartFile;
 
+import com.amazonaws.services.s3.model.S3Object;
 import com.bridgelabz.fundoonotes.model.ProfilePic;
 
 public interface ProfilePicService {
 
 	ProfilePic storeObjectInS3(MultipartFile file, String originalFilename, String contentType, String token);
 
-	ProfilePic updateProfilePic(MultipartFile file, String token);
+	void deleteProfilePic(String token);
 
-	ProfilePic deleteProfilePic(MultipartFile file, String token);
+	S3Object getProfilePic(MultipartFile file, String token);
 
-	List<ProfilePic> getProfilePic(MultipartFile file, String token);
+	ProfilePic updateProfilePic(MultipartFile file, String originalFile, String contentType, String token);
 
 }
