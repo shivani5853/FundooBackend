@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.bridgelabz.fundoonotes.dto.LabelDto;
+import com.bridgelabz.fundoonotes.exception.LabelNotCreatedException;
+import com.bridgelabz.fundoonotes.exception.LabelNotFoundException;
 import com.bridgelabz.fundoonotes.model.Labels;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.model.User;
@@ -60,12 +62,14 @@ public class LabelServiceImplementation implements LabelServiceInf {
 					labelRepository.insertData(labelNew.getLabelName(), userId);
 					return labelNew;
 				} else {
-					return null;
+					throw new LabelNotCreatedException("level not created!!!");
 				}
 			}
 			return null;
 
 		} catch (JWTVerificationException | IllegalArgumentException | UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (LabelNotCreatedException e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -83,7 +87,7 @@ public class LabelServiceImplementation implements LabelServiceInf {
 				labelRepository.deleteLabel(label.getLableName(), user.getUserId());
 				return labelNew;
 			} else {
-				return null;
+				throw new LabelNotFoundException("Label Not Found!!!");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
