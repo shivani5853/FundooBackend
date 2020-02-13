@@ -21,4 +21,6 @@ public interface UserServiceInf {
 	public User forgetPassword(String email);
 
 	boolean updatePassword(UpdatePassword password, String token);
+
+	public List<User> getAllUser(Integer pageNo, Integer pageSize);
 }

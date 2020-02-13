@@ -3,13 +3,14 @@ package com.bridgelabz.fundoonotes.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
 import com.bridgelabz.fundoonotes.model.Labels;
 import com.bridgelabz.fundoonotes.model.User;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, Long>{
 
 	@Query(value = "select * from user where email=?", nativeQuery = true)
 	User checkByEmail(String email);

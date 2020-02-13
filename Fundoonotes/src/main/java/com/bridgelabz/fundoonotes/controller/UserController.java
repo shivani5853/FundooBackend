@@ -1,5 +1,7 @@
 package com.bridgelabz.fundoonotes.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.fundoonotes.dto.UpdatePassword;
@@ -88,5 +91,16 @@ public class UserController {
 		return (verified)
 				? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Password Changed Sucessfully!!!", 200))
 				: ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Password Not Update", 400));
+	}
+	@PostMapping("/getAllUser")
+	public ResponseEntity<Responses> getAllUser(@RequestParam(defaultValue = "0") Integer pageNo, 
+            @RequestParam(defaultValue = "10") Integer pageSize){
+		System.out.println("12");
+		List<User> list=service.getAllUser(pageNo, pageSize);
+		
+		return list!=null
+				? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Data are!!!", 200,list))
+				: ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Paging Not Available", 400));
+		
 	}
 }

@@ -1,12 +1,18 @@
 package com.bridgelabz.fundoonotes.serviceimplementation;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.elasticsearch.cli.UserException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,6 +22,7 @@ import com.bridgelabz.fundoonotes.dto.UpdatePassword;
 import com.bridgelabz.fundoonotes.dto.UserDto;
 import com.bridgelabz.fundoonotes.dto.UserLoginDto;
 import com.bridgelabz.fundoonotes.model.User;
+import com.bridgelabz.fundoonotes.repository.UserPagingRepository;
 import com.bridgelabz.fundoonotes.repository.UserRepository;
 import com.bridgelabz.fundoonotes.service.UserServiceInf;
 import com.bridgelabz.fundoonotes.utility.JwtGenerator;
@@ -29,8 +36,14 @@ public class UserServiceImplementation implements UserServiceInf {
 	private User user = new User();
 
 	@Autowired
-	private BCryptPasswordEncoder passwordEncoder;
+	private UserPagingRepository userPagingRepository; 
 	
+	@Autowired
+	private KafkaTemplate<String, String> kafkaTemplate;
+
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+
 	@Autowired
 	private UserRepository userRepository;
 
@@ -38,12 +51,12 @@ public class UserServiceImplementation implements UserServiceInf {
 	private JwtGenerator jwtGenerator;
 
 	@Autowired
-	private Springmail mail	;
+	private Springmail mail;
 
 	private UpdatePassword updatePassword = new UpdatePassword();
 
 	@Override
-	public User register(UserDto userDto){
+	public User register(UserDto userDto) {
 		user.setFirstName(userDto.getFirstName());
 		user.setLastName(userDto.getLastName());
 		user.setEmail(userDto.getEmail());
@@ -56,7 +69,8 @@ public class UserServiceImplementation implements UserServiceInf {
 		String email = user.getEmail();
 		String response = "http://localhost:8080/verify/" + jwtGenerator.jwtToken(isUserAvailableTwo.getUserId());
 		mail.sendMail(email, response);
-		
+//		kafkaTemplate.send(email,response);
+
 		return user;
 	}
 
@@ -65,14 +79,13 @@ public class UserServiceImplementation implements UserServiceInf {
 		User user = userRepository.checkByEmail(userLogin.getEmail());
 		System.out.println(user + userLogin.getEmail());
 		if (user.getEmail().equalsIgnoreCase(userLogin.getEmail())) {
-			if(user.isVerified())
-			{
-			boolean ispasswordMatch = BCrypt.checkpw(userLogin.getPassword(), user.getPassword());
-			if (ispasswordMatch) {
-				System.out.println("sucessfully login");
-				return user;
-			} 
-			}else {
+			if (user.isVerified()) {
+				boolean ispasswordMatch = BCrypt.checkpw(userLogin.getPassword(), user.getPassword());
+				if (ispasswordMatch) {
+					System.out.println("sucessfully login");
+					return user;
+				}
+			} else {
 				return null;
 			}
 
@@ -155,6 +168,22 @@ public class UserServiceImplementation implements UserServiceInf {
 			e1.printStackTrace();
 		}
 		return false;
+	}
+
+	@Override
+	public List<User> getAllUser(Integer pageNo, Integer pageSize) {
+		System.out.println("1");
+		Pageable paging = PageRequest.of(pageNo, pageSize);
+		System.out.println("2");
+		  Page<User> userResult=userPagingRepository.findAll(paging);
+		  System.out.println("3");
+		 if(userResult.hasContent())
+		 {
+			 return userResult.getContent();
+		 }
+		 else {
+			 return new ArrayList<User>();
+		 }
 	}
 
 }
