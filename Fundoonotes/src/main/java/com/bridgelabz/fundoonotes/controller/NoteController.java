@@ -155,4 +155,12 @@ public class NoteController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Note not available", 400));
 		}
 	}
+	
+	@PostMapping("/getAllNoteByPage")
+	public ResponseEntity<Responses> getAllNoteByPage(@RequestParam(defaultValue = "0") Integer pageNo, 
+            @RequestParam(defaultValue = "10") Integer pageSize){
+		List<Notes> result=noteServiceInf.getAllNoteByPage(pageNo,pageSize);
+		return result!=null? ResponseEntity.status(HttpStatus.ACCEPTED).body(new Responses("Notes are!!!",200,result)):
+			ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new Responses("Sorry Something went wrong!!!",400));
+	}
 }

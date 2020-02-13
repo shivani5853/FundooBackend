@@ -2,9 +2,13 @@ package com.bridgelabz.fundoonotes.serviceimplementation;
 
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
@@ -14,6 +18,7 @@ import com.bridgelabz.fundoonotes.dto.NoteDto;
 import com.bridgelabz.fundoonotes.dto.ReminderDto;
 import com.bridgelabz.fundoonotes.model.Notes;
 import com.bridgelabz.fundoonotes.model.User;
+import com.bridgelabz.fundoonotes.repository.NotePagingRepository;
 import com.bridgelabz.fundoonotes.repository.NoteRepository;
 import com.bridgelabz.fundoonotes.repository.UserRepository;
 import com.bridgelabz.fundoonotes.service.ElasticsearchService;
@@ -25,6 +30,9 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class NoteServiceImplementation implements NoteServiceInf {
+
+	@Autowired
+	private NotePagingRepository notePagingRepository;
 
 	@Autowired
 	private ElasticsearchService elasticsearchService;
@@ -296,6 +304,24 @@ public class NoteServiceImplementation implements NoteServiceInf {
 			e.printStackTrace();
 		}
 
+		return null;
+	}
+
+	@Override
+	public List<Notes> getAllNoteByPage(Integer pageNo, Integer pageSize) {
+		try {
+			Pageable paging = PageRequest.of(pageNo, pageSize);
+			System.out.println("2");
+			Page<Notes> noteResult = notePagingRepository.findAll(paging);
+			System.out.println("3");
+			if (noteResult.hasContent()) {
+				return noteResult.getContent();
+			} else {
+				return new ArrayList<Notes>();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 

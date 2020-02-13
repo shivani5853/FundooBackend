@@ -28,4 +28,6 @@ public interface NoteServiceInf {
 	public List<Notes> searchByNoteId(long noteId, String token);
 
 	public Notes verify(String token);
+
+	public List<Notes> getAllNoteByPage(Integer pageNo, Integer pageSize);
 }
